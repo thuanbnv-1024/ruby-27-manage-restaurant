@@ -150,6 +150,7 @@ ActiveRecord::Schema.define(version: 2020_07_02_033642) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "email"
+    t.string "name"
     t.string "address"
     t.string "password_digest"
     t.string "activation_digest"
@@ -157,7 +158,6 @@ ActiveRecord::Schema.define(version: 2020_07_02_033642) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "department_id", null: false
-    t.string "name"
     t.integer "role", default: 0, null: false
     t.date "birthday"
     t.string "phone"
