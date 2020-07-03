@@ -7,6 +7,17 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("packs/main")
+require("packs/scroll")
+require("packs/plugins")
+require("packs/vendor/bootstrap")
+require("packs/vendor/bootstrap.min")
+require("packs/vendor/npm")
+require("packs/vendor/modernizr-2.8.3-respond-1.4.2.min")
+require("packs/vendor/jquery-1.11.2.min")
+
+import 'src/stylesheets/application'
+const images = require.context('../images', true)
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

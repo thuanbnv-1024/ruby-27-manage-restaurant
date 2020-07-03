@@ -1,33 +1,30 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  header:
+    home: "Home"
+    menu: "Menu"
+    contact: "Contact"
+    blog: "Blog"
+  footer:
+    copyright: "Copyright 2017 Victory Template"
+    author: "Victory Template"
+    design: "Designed by "
+  static_pages:
+    index:
+      find_food: "Here you can find delecious foods"
+      vi_res: "Asian Restaurant"
+      serve: "Here you will be fully served"
+      order: "Order right now"
+      cook-delecious: "WE COOK DELECIOUS"
+      contact: "YOU CAN CALL US ON:"
+      or: "or"
+      phone_contact: "+ 1234 567 8910"
+      breakfast: "Breakfast"
+      lunch: "Lunch"
+      dinner: "Dinner"
+      dessert: "Desserts"
+      book_table: "BOOK YOUR TABLE NOW"
+      reservation: "Reservation"
+      book_table_submit: "BOOK TABLE"
+      featured_food: "Weekly Featured Food"
+      sign_up: "Signup for our newsletters"
+      sign_up_submit: "Send Message"

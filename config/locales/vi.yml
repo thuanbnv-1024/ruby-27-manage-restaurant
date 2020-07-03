@@ -1,0 +1,30 @@
+vi:
+  header:
+    home: "Trang chủ"
+    menu: "Thực đơn"
+    contact: "Liên hệ"
+    blog: "Bài viết"
+  footer:
+    copyright: "Bản quyền 2017 Victory Template"
+    author: "Victory Template"
+    design: "Thiết kế bởi "
+  static_pages:
+    index:
+      find_food: "Bạn có thể đặt món tại đây"
+      vi_res: "Nhà hàng Việt Nam"
+      serve: "Tại đây bạn sẽ được phục vụ một cách ..."
+      order: "Đặt bàn ngay"
+      cook-delecious: "CHÚNG TÔI GIAO HÀNG TẬN NƠI"
+      contact: "GỌI NGAY ĐỂ GIAO HÀNG"
+      or: "hoặc"
+      phone_contact: "+ 1234 567 8910"
+      breakfast: "Bữa sáng"
+      lunch: "Bữa trưa"
+      dinner: "Bữa tối"
+      dessert: "Tráng miệng"
+      book_table: "GIỮ CHỖ NGAY"
+      reservation: "Đặt chỗ"
+      book_table_submit: "ĐẶT BÀN"
+      featured_food: "Món ăn nổi bật"
+      sign_up: "Đăng kí nhận thông tin tại đây"
+      sign_up_submit: "Gửi ngay"
