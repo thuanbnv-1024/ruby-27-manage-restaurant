@@ -8,7 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("packs/main")
-require("packs/scroll")
+
 require("packs/plugins")
 require("packs/vendor/bootstrap")
 require("packs/vendor/bootstrap.min")
