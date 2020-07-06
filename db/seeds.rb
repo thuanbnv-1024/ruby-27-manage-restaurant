@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+4.times do
+  name = Faker::Name.name
+  description = Faker::Lorem.sentence(5)
+  Department.create! name: name, description: description
+end
+
+departments = Department.order(:created_at).take(4)
+15.times do
+  name = Faker::Name.name
+  departments.each { |department| department.users.create! name: name }
+end
