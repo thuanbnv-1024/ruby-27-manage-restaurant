@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_02_033642) do
+ActiveRecord::Schema.define(version: 2020_07_07_064249) do
 
   create_table "book_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.time "start_time"
@@ -157,8 +157,8 @@ ActiveRecord::Schema.define(version: 2020_07_02_033642) do
     t.string "activated"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "department_id", null: false
-    t.integer "role", default: 0, null: false
+    t.bigint "department_id"
+    t.integer "role", default: 2, null: false
     t.date "birthday"
     t.string "phone"
     t.integer "gender", default: 0, null: false

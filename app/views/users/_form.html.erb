@@ -1,0 +1,36 @@
+<%= form_for @user do |f| %>
+  <%= f.label :name, t("users.form.name") %>
+  <%= f.text_field :name, class: "form-control #{errors_textfield(f, :name)}"%>
+  <p id="error_explanation"><%= show_errors(f, :name) %></p>
+
+  <%= f.label :email, t("users.form.email") %>
+  <%= f.email_field :email, class: "form-control #{errors_textfield(f, :email)}", required: true %>
+  <p id="error_explanation"><%= show_errors(f, :email) %></p>
+
+  <%= f.label :address, t("users.form.address") %>
+  <%= f.text_field :address, class: "form-control #{errors_textfield(f, :address)}", required: true %>
+  <p id="error_explanation"><%= show_errors(f, :address) %></p>
+
+  <%= f.label :phone, t("users.form.phone") %>
+  <%= f.text_field :phone, class: "form-control #{errors_textfield(f, :phone)}", required: true %>
+  <p id="error_explanation"><%= show_errors(f, :phone) %></p>
+
+  <%= f.label :birthday, t("users.form.birthday") %>
+  <%= datetime_local_field("user", "birthday")%>
+  <p id="error_explanation"><%= show_errors(f, :birthday) %></p>
+
+  <% User.genders.keys.each do |key| %>
+    <%= f.label :gender, t("users.form.#{key}") %>
+    <%= radio_button("user","gender", "#{key}") %>
+  <% end %>
+
+  <%= f.label :password, t("users.form.password") %>
+  <%= f.password_field :password, class: "form-control #{errors_textfield(f, :password)}", required: true %>
+  <p id="error_explanation"><%= show_errors(f, :password) %></p>
+
+  <%= f.label :password_confirmation, t("errors.user.password_confirmation") %>
+  <%= f.password_field :password_confirmation, class: "form-control #{errors_textfield(f, :password_confirmation)}", required: true %>
+  <p id="error_explanation"><%= show_errors(f, :password_confirmation) %></p>
+
+  <%= f.submit t("users.form.submit_sign_up"), class: "btn btn-primary" %>
+<% end %>

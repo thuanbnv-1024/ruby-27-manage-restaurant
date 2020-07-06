@@ -1,0 +1,6 @@
+<p><%= @user.name %>,</p>
+<p>
+<%= t "users.active.text_guildline" %>
+</p>
+<%= link_to t("users.active.text_active"),
+edit_account_activation_url(id: @user.activation_token, email: @user.email) %>

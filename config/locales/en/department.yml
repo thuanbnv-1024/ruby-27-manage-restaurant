@@ -1,0 +1,11 @@
+en:
+  admin:
+    departments:
+      index: "New"
+      new:
+        button: "Submit"
+        name: "Name"
+        description: "Description"
+      create:
+        success: "New creation successfully!"
+        danger: "New creation failed!"

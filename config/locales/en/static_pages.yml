@@ -28,29 +28,6 @@ en:
       featured_food: "Weekly Featured Food"
       sign_up: "Signup for our newsletters"
       sign_up_submit: "Send Message"
-  admin:
-    error: "error"
-    login: "Login"
-    email: "Email"
-    password: "Password"
-    remember_password: "Remember password"
-    forgot_password: "Forgot Password?"
-    admin: "Admin"
-    dashboard: "Dashboard"
-    settings: "Settings"
-    logout: "Logout"
-    core: "Core"
-    logged_in_as: "Logged in as:"
-    department: "Departments"
-    departments:
-      index: "New"
-      new:
-        button: "Submit"
-        name: "Name"
-        description: "Description"
-      create:
-        success: "New creation successfully!"
-        danger: "New creation failed!"
   dish_types:
     create_success: "Create success"
     create_error: "Create error"

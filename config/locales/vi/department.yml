@@ -1,0 +1,11 @@
+vi:
+  admin:
+    departments:
+      index: "Thêm mới"
+      new:
+        button: "Gửi"
+        name: "Tên chức vụ"
+        description: "Mô tả chi tiết"
+      create:
+        success: "Thêm mới thành công!"
+        danger: "Thêm mới thất bại!"
