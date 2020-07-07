@@ -1,0 +1,18 @@
+ <tr>
+  <th scope="row"><%= admin_customers.id %></th>
+  <td><%= admin_customers.name %></td>
+  <td><%= admin_customers.email %></td>
+  <td><%= admin_customers.phone %></td>
+  <td><%= admin_customers.address %></td>
+  <td>
+    <div class="btn-group">
+      <%= link_to edit_admin_admin_customer_path(id: admin_customers.id), class: "btn btn-warning" do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+      <%= button_to admin_admin_customer_path(id: admin_customers.id), class: "btn btn-danger",
+        :method => :delete do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
+    </div>
+  </td>
+</tr>
