@@ -29,6 +29,7 @@ vi:
       sign_up: "Đăng kí nhận thông tin tại đây"
       sign_up_submit: "Gửi ngay"
   admin:
+    error: "lỗi"
     login: "Đăng nhập"
     email: "Email"
     password: "Mật khẩu"
@@ -41,3 +42,12 @@ vi:
     core: "Chính"
     logged_in_as: "Đăng nhập bởi:"
     department: "Bộ phận nhân viên"
+    departments:
+      index: "Thêm mới"
+      new:
+        button: "Gửi"
+        name: "Tên chức vụ"
+        description: "Mô tả chi tiết"
+      create:
+        success: "Thêm mới thành công!"
+        danger: "Thêm mới thất bại!"

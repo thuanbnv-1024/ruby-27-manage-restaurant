@@ -1,9 +1,6 @@
-<div id="layoutSidenav">
-  <div id="layoutSidenav_content">
-    <div class="list_departments">
-      <ul class="list-group">
-        <%= render @departments %>
-      </ul>
-    </div>
-  </div>
+<div class="list_departments">
+  <%= link_to t("admin.departments.index"), new_admin_department_path, class: "btn btn-primary", role: :button %>
+  <ul class="list-group">
+    <%= render @departments %>
+  </ul>
 </div>
