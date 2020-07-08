@@ -1,0 +1,7 @@
+vi:
+  dishes:
+    in_stock: "Còn món"
+    out_of_stock: "Hết món"
+    list_dishes: "Danh sách món ăn"
+    status: "Trạng thái"
+    price: "Giá"
