@@ -1,0 +1,12 @@
+en:
+  errors:
+    user:
+      name: "Name"
+      email: "Email"
+      address: "Address"
+      phone: "Phone"
+      birthday: "Date of birth"
+      man: "Man"
+      women: "Women"
+      password: "Password"
+      password_confirmation: "Confirm password"

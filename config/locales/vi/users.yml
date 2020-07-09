@@ -1,0 +1,24 @@
+vi:
+  users:
+    form:
+      name: "Tên"
+      email: "Email"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      address: "Địa chỉ"
+      phone: "Điện thoại"
+      man: "Nam"
+      women: "Nữ"
+      birthday: "Ngày sinh"
+      submit_sign_up: "Tạo tài khoản"
+      sign_up: "Đăng ký"
+      error: "lỗi"
+    create:
+      create_success: "Tạo tài khoản thành công"
+      create_fail: "Tạo tài khoản thất bại"
+    active:
+      active_success: "Kích hoạt thành công, vui lòng đăng nhập"
+      active_fail: "Link không tồn tại"
+      active_check: "Vui lòng kiểm tra hướng dẫn kích hoạt trong email"
+      text_guildline: "Chào mừng bạn đến nhà hàng HTT, vui lòng kích vào link bên dưới để kích hoạt tài khoản"
+      text_active: "Kích hoạt"

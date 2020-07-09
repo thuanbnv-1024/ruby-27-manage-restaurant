@@ -8,3 +8,16 @@ department:
       max: 5000
 dish_types:
   format_date: "%d/%m/%Y"
+email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+user:
+  name:
+    max_length: 50
+  email:
+    max_length: 200
+  address:
+    max_length: 255
+  phone:
+    min_length: 10
+    max_length: 12
+  password:
+    min_length: 6

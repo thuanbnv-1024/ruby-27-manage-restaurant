@@ -1,0 +1,12 @@
+vi:
+  errors:
+    user:
+      name: "Tên"
+      email: "Email"
+      address: "Địa chỉ"
+      phone: "Điện thoại"
+      birthday: "Ngày sinh"
+      man: "Nam"
+      women: "Nữ"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
