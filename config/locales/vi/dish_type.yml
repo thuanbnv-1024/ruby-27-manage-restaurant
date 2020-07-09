@@ -17,3 +17,18 @@ vi:
     updated_up: "Thời gian cập nhật"
     action: "Hành động"
     category: "Danh mục sản phẩm"
+    category_title: "Danh mục sản phẩm"
+    category:
+      edit:
+        button: "Cập nhật"
+      update:
+        success: "Cập nhật thành công!"
+        danger: "Cập nhật thất bại!"
+      destroy:
+        success: "Xóa thành công!"
+        danger: "Xóa thất bại!"
+      department:
+        edit: "Sửa"
+        delete: "Xóa"
+        staff: "Nhân viên"
+        confirm: "Bạn có chắc chắn muốn xóa?"

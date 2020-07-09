@@ -17,3 +17,18 @@ en:
     updated_up: "Updated up"
     action: "Action"
     category: "Category"
+    category_title: "Category"
+    category:
+      edit:
+        button: "Update"
+      update:
+        success: "Update successfully!"
+        danger: "Update failed!"
+      destroy:
+        success: "Delete successfully!"
+        danger: "Delete failed!"
+      department:
+        edit: "Edit"
+        delete: "Delete"
+        staff: "Staff"
+        confirm: "Are you sure?"

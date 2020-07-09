@@ -8,6 +8,8 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("packs/main")
+require("packs/ajax")
+require("jquery")
 
 require("packs/plugins")
 require("packs/vendor/bootstrap")
