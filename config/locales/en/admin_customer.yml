@@ -1,0 +1,22 @@
+en:
+  admin_customer:
+    title: "Update information"
+    name: "Name"
+    email: "Email"
+    phone: "Phone"
+    address: "Address"
+    action: "Action"
+    id: "STT"
+    man: "Man"
+    women: "Women"
+    all_customer: "Customer List"
+    not_found_user: "Not found user"
+    list: "Customer Department"
+    edit:
+      submit: "Update"
+    update:
+        update_success: "Update success"
+        update_fail: "Update fail"
+    delete:
+        delete_success: "Delete success"
+        delete_fail: "Delete fail"

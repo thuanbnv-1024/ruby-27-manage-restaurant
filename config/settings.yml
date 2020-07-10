@@ -9,6 +9,8 @@ department:
 dish_types:
   format_date: "%d/%m/%Y"
 email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+admin_customer:
+  per_page: 5
 user:
   name:
     max_length: 50

@@ -1,0 +1,18 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+.btn-group a{
+  margin-right: 10px;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px;
+  }
+}
+
+.errors_textfield {
+  border-color: red;
+}

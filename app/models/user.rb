@@ -6,13 +6,15 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = Settings.email_regex
   PERMIT_ATTRIBUTES = %i(name email password password_confirmation address
                           birthday phone gender).freeze
+  CUSTOMER_UPDATE_PARAMS = %i(name address phone birthday gender password password_confirmation).freeze
 
   attr_accessor :activation_token
 
   before_save :downcase_email
   before_create :create_activation_digest
 
-  validates :name, :email, :address, :phone, :birthday, :password, presence: true
+  validates :name, :email, :address, :phone,
+            :birthday, presence: true
 
   validates :name, length: {maximum: Settings.user.name.max_length}
   validates :email, length: {maximum: Settings.user.email.max_length},
@@ -22,8 +24,8 @@ class User < ApplicationRecord
             length: {maximum: Settings.user.address.max_length}
   validates :phone, numericality: true,
             length: {minimum: Settings.user.phone.min_length,
-                    maximum: Settings.user.phone.max_length}
-  validates :password, length: {minimum: Settings.user.password.min_length}
+                     maximum: Settings.user.phone.max_length}
+  validates :password, length: {minimum: Settings.user.password.min_length}, allow_nil: true
 
   has_secure_password
 
