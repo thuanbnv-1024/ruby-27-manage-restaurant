@@ -16,7 +16,6 @@ require("packs/vendor/npm")
 require("packs/vendor/modernizr-2.8.3-respond-1.4.2.min")
 require("packs/vendor/jquery-1.11.2.min")
 
-import 'src/stylesheets/application'
 const images = require.context('../images', true)
 
 

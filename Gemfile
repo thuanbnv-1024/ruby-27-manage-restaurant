@@ -5,6 +5,7 @@ ruby "2.7.1"
 
 gem "bcrypt", "3.1.11"
 gem "bootsnap", ">= 1.4.2", require: false
+gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "~> 3.3.1"
 gem "config"
 gem "faker", "1.7.3"

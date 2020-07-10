@@ -1,0 +1,21 @@
+<tr>
+  <th scope="row"><%= dish_counter + 1 %></th>
+  <td><%= dish.name %></td>
+  <td><%= dish.description %></td>
+  <td><%= dish.price %></td>
+  <td>
+    <span class="btn btn-<%= load_status dish %>"><%= load_text_status dish %></span>
+  </td>
+  <td><%= dish.created_at.strftime(Settings.dish_types.format_date) %></td>
+  <td><%= dish.updated_at.strftime(Settings.dish_types.format_date) %></td>
+  <td>
+    <div class="btn-group">
+      <%= link_to edit_admin_dish_path(dish), class: "btn btn-warning", title: t("dish_types.edit") do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+      <%= link_to [:admin, dish], method: :delete, title: t("dish_types.delete"), class: "btn btn-danger" do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end %>
+    </div>
+  </td>
+</tr>

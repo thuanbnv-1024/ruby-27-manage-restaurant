@@ -1,0 +1,7 @@
+en:
+  dishes:
+    in_stock: "In of stock"
+    out_of_stock: "Out stock"
+    list_dishes: "List of dishes"
+    status: "Status"
+    price: "Price"

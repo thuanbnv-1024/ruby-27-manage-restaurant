@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :admin_customers
       resources :departments
       resources :dish_types
+      resources :dishes
     end
     get "/account_activations/:id/edit", to: "account_activations#edit", as: "edit_account_activation"
     resources :users

@@ -1,0 +1,32 @@
+<%= form_for [:admin, @dish] do |f| %>
+  <%= render "admin/shared/error_messages", object: f.object %>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <%= f.label :name, t("dish_types.name") %>
+      <%= f.text_field :name, class: "form-control", required: "true" %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= f.label :dish_type_id, t("dishes.list_dishes") %>
+      <br/>
+      <%= f.collection_select :dish_type_id, DishType.dish_types, :id, :name, {}, {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <%= f.label :price, t("dishes.price") %>
+      <%= f.number_field :price, class: "form-control" %>
+    </div>
+    <div class="form-group col-md-2">
+      <%= f.label :status, t("dishes.status") %>
+      <br/>
+      <%= f.select :status, options_for_status, {}, {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <%= f.label :description, t("dish_types.description") %>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+  </div>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

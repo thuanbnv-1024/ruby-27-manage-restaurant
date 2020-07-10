@@ -4,9 +4,8 @@ module ApplicationHelper
     return unless object.errors.any?
 
     return if object.errors.messages[field_name].blank?
-
     [t("errors.user.#{field_name}"),
-      form_builder.object.errors.messages[field_name].join(", ")].join(" ")
+      object.errors.messages[field_name].join(", ")].join(" ")
   end
 
   def errors_textfield form_builder, field_name
