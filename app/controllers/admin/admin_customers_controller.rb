@@ -2,7 +2,8 @@ class Admin::AdminCustomersController < AdminController
   before_action :load_customer, only: %i(destroy edit update)
 
   def index
-    @admin_customers = User.customer.page(params[:page]).per Settings.admin_customer.per_page
+    @admin_customers = User.customer.page(params[:page])
+                           .per Settings.admin_customer.per_page
   end
 
   def edit; end

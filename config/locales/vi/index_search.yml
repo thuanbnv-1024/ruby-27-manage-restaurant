@@ -1,0 +1,8 @@
+vi:
+  search:
+    menu_title: "Thực đơn"
+    menu_description: "Chúc quý khách ngon miệng"
+    category: "Loại món"
+    review_button: "Đọc đánh giá"
+    hot: "Nổi bật"
+    search_button: "Tìm kiếm"
