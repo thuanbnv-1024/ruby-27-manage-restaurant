@@ -28,5 +28,23 @@
       <%= f.text_area :description, class: "form-control" %>
     </div>
   </div>
+  <%= f.label t("dishes.image") %>
+  <div class="form-group">
+    <div class="col-md-6">
+      <div class="links">
+        <%= link_to_add_association t("image.add_a_image"), f, :images,
+                                    data: { association_insertion_node: ".images",
+                                            association_insertion_method: :append,
+                                          },
+                                    class: "btn btn-success" %>
+      </div>
+      <table class="images">
+        <%= f.fields_for :images do |image| %>
+          <%= render "image_fields", f: image %>
+        <% end %>
+      </table>
+    </div>
+  </div>
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
+<%= javascript_pack_tag "image" %>

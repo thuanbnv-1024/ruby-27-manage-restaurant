@@ -1,16 +1,20 @@
-<div class="list">
-  <%= link_to t("dish_types.add"), new_admin_dish_path, class: "btn btn-primary" %>
+<div class="list clearfix">
+  <div class="float-left">
+    <h1 class="title-list"><%= t "dishes.list_dishes" %></h1>
+  </div>
+  <div class="float-right">
+    <%= link_to t("dish_types.add"), new_admin_dish_path, class: "btn btn-primary btn-lg" %>
+  </div>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col"><%= t "dish_types.name" %></th>
+      <th scope="col"><%= t "dishes.image" %></th>
       <th scope="col"><%= t "dish_types.description" %></th>
       <th scope="col"><%= t "dishes.price" %></th>
       <th scope="col"><%= t "dishes.status" %></th>
-      <th scope="col"><%= t "dish_types.created_up" %></th>
-      <th scope="col"><%= t "dish_types.updated_up" %></th>
       <th scope="col"><%= t "dish_types.action" %></th>
     </tr>
   </thead>

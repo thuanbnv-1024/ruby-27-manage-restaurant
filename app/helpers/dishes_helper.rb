@@ -10,6 +10,6 @@ module DishesHelper
   end
 
   def load_text_status dish
-    dish.in_stock? ? t("dishes.in_stock") : t("dishes.out_stock")
+    dish.in_stock? ? t("dishes.in_stock") : t("dishes.out_of_stock")
   end
 end

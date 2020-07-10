@@ -12,6 +12,8 @@ require("packs/main")
 require("packs/ajax")
 require("jquery")
 require("packs/scroll")
+require("cocoon-js")
+
 require("packs/plugins")
 require("packs/vendor/bootstrap")
 require("packs/vendor/bootstrap.min")
