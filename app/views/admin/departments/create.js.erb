@@ -1,0 +1,14 @@
+$('ul.errors').html('')
+$('.notification').html('')
+<% if @department.errors.any? %>
+  <% @department.errors.full_messages.each do |message| %>
+    $('ul.errors').append($('<li />').html('<%= message.html_safe %>'))
+  <% end %>
+  $('.notification').append('<div class="alert alert-danger"><%= t ".danger" %></div>')
+<% else %>
+  $('.tbody').append('<%= j render "department", department: @department %>')
+  var counter = $('#department-tbody tr').length;
+  $('#department-tbody tr:nth-child(' + counter + ')').find('.row-id').text(counter);
+  $('#myModal').modal('hide')
+  $('.notification').append('<div class="alert alert-success"><%= t ".success" %></div>')
+<% end %>

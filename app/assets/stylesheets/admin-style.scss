@@ -10260,5 +10260,30 @@ body {
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
 }
-@import "bootstrap-sprockets";
-@import "bootstrap";
+ul.pagination li{
+  padding: 4px 9px;
+  border: 1px solid #3891dc;
+}
+ul.pagination li.page{
+  padding: 4px 12px;
+}
+ul.pagination li {
+  border-left: 0px;
+  font-size: 14px;
+  font-weight: 500;
+}
+ul.pagination li:first-child {
+  border-left: 1px solid #3891dc;
+}
+ul.pagination li.page.active {
+  background: #1b6db3;
+}
+ul.pagination li.page.active a{
+  color: #ffffff;
+}
+ul.pagination li:hover {
+  background: #1b6db3;
+}
+ul.pagination li:hover a{
+  color: #ffffff;
+}
