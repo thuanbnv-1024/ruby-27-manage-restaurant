@@ -28,3 +28,6 @@ user:
     min_length: 6
 dishes:
   per_page: 5
+manage_tables:
+  format_date: "On %I:%M%p %m/%d/%Y"
+  per_page: 5

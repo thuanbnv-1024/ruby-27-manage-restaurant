@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :dish_types
       resources :dishes
       resources :users
+      resources :table_manage
     end
     get "/account_activations/:id/edit", to: "account_activations#edit", as: "edit_account_activation"
     resources :users
