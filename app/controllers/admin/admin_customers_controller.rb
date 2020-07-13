@@ -8,7 +8,7 @@ class Admin::AdminCustomersController < AdminController
   def edit; end
 
   def update
-    if @customer.update_attributes customer_update_params
+    if @customer.update customer_update_params
       flash[:success] = t "admin_customer.update.update_success"
       redirect_to admin_admin_customers_path
     else

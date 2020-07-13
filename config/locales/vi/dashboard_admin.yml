@@ -13,3 +13,4 @@ vi:
     core: "Core"
     logged_in_as: "Logged in as:"
     department: "Departments"
+    users_db: "Nhân viên"
