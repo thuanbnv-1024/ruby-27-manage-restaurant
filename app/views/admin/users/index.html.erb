@@ -1,0 +1,27 @@
+<div class="list_users">
+  <div class="notification"></div>
+  <div class="top-title">
+    <div class="title">
+      <h2><%= t ".title" %></h2>
+    </div>
+    <div class="create">
+      <%= link_to t(".create_new"), new_admin_user_path, "data-toggle": "modal", "data-target": "#myModal-form-user", remote: true, class: "btn btn-primary" %>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"><%= t ".name" %></th>
+        <th scope="col"><%= t ".department" %></th>
+        <th scope="col"><%= t ".status" %></th>
+      </tr>
+    </thead>
+    <tbody class="tbody" id="department-tbody">
+      <%= render @users %>
+    </tbody>
+  </table>
+  <%= paginate @users, theme: "twitter-bootstrap-3" %>
+</div>
+<div class="modal" id="myModal-form-user">
+</div>

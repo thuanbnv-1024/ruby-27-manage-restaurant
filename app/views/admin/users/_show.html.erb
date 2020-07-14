@@ -1,0 +1,27 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title"><%= t ".details_user" %></h4>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-6">
+          <p><span><%= t ".name" %>: </span><%= user.name %></p>
+          <p><span><%= t ".email" %>: </span><%= user.email %></p>
+          <p><span><%= t ".address" %>: </span><%= user.address %></p>
+          <p><span><%= t ".phone" %>: </span><%= user.phone %></p>
+        </div>
+        <div class="col-md-6">
+          <p><span><%= t ".gender" %>: </span><%= user.gender %></p>
+          <p><span><%= t ".birthday" %>: </span><%= user.birthday %></p>
+          <p><span><%= t ".department" %>: </span><%= user.department_name %></p>
+          <p><span><%= t ".activated" %>: </span><%= user.activated %></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal"><%= t ".close" %></button>
+    </div>
+  </div>
+</div>

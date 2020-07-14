@@ -25,3 +25,47 @@ account:"
       text_active: "Active"
     user_mailer:
       account_active: "Account active"
+  admin:
+    users:
+      create:
+        danger: "Create new fail!"
+        success: "Create new successfully!"
+      new:
+        button_text: "Create new user"
+      index:
+        title: "Employee manager"
+        create_new: "Create new"
+        name: "Name"
+        department: "Department"
+        status: "Status"
+      form:
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone"
+        birthday: "Birthday"
+        department: "Department"
+        activated: "Activated"
+        gender: "Gender"
+        man: "Man"
+        women: "Women"
+        password: "Password"
+        password_confirmation: "Password_confirmation"
+        submit: "Submit"
+      show:
+        details_user: "Employee details"
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone"
+        birthday: "Birthday"
+        department: "Department"
+        activated: "Activated"
+        gender: "Gender"
+        submit: "Close"
+      user:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      find_user:
+        danger: "Does not exist"

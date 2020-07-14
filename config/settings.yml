@@ -7,6 +7,8 @@ department:
       max: 30
     description:
       max: 5000
+users:
+  per: 10
 dish_types:
   format_date: "%d/%m/%Y"
 email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

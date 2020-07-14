@@ -26,11 +26,6 @@
     <script type="text/javascript">
       I18n.defaultLocale = "<%= I18n.default_locale %>";
       I18n.locale = "<%= I18n.locale %>";
-      $('#department-tbody tr').each(function(i, tr) {
-        $('#department-tbody tr:nth-child(' + i + ')').find('.row-id').text(i);
-      })
-      var counter = $('#department-tbody tr').length;
-      $('#department-tbody tr:nth-child(' + counter + ')').find('.row-id').text(counter);
     </script>
   </body>
 </html>
