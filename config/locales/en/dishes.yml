@@ -5,3 +5,8 @@ en:
     list_dishes: "List of dishes"
     status: "Status"
     price: "Price"
+    image: "Image"
+    update_success: "Update success"
+  image:
+    add_a_image: "Add a image"
+    delete: "Delete"

@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     end
     get "/account_activations/:id/edit", to: "account_activations#edit", as: "edit_account_activation"
     resources :users
-    resources :dishes only: :index
+    resources :dishes, only: :index
   end
 end

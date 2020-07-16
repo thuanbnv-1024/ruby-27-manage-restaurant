@@ -15,7 +15,7 @@ class Admin::DishTypesController < AdminController
     @dish_type = DishType.new dish_type_params
     if @dish_type.save
       flash[:success] = t "dish_types.create_success"
-      redirect_to root_url
+      redirect_to admin_dish_types_path
     else
       flash[:danger] = t "dish_types.create_error"
       render :new
