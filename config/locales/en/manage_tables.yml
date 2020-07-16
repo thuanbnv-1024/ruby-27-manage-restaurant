@@ -1,0 +1,9 @@
+en:
+  manage_tables:
+    title: "Table on/off"
+    number_table: "Number of table"
+    number_seat: "Number seat"
+    status: "Status"
+    time: "Time"
+    table_on: "On"
+    table_off: "Off"

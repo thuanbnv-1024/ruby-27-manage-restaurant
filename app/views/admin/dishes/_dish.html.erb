@@ -2,7 +2,9 @@
   <th scope="row"><%= dish_counter + 1 %></th>
   <td><%= dish.name %></td>
   <td>
+    <% if dish.images.present? %>
     <%= image_tag dish.images.first.image.url, class: "image-dish" %>
+    <% end %>
   </td>
   <td><%= dish.description %></td>
   <td><%= dish.price %></td>

@@ -1,0 +1,9 @@
+vi:
+  manage_tables:
+    title: "Thông tin bàn on/off"
+    number_table: "Số bàn"
+    number_seat: "Số ghế ngồi"
+    status: "Tình trạng"
+    time: "Thời gian sử dụng"
+    table_on: "Đã sử dụng"
+    table_off: "Đang còn trống"

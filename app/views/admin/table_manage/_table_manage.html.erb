@@ -1,0 +1,9 @@
+<tr>
+  <th scope="row"><%= table_manage_counter + 1 %></th>
+  <td><%= table_manage.table_number %></td>
+  <td><%= table_manage.number_seats %></td>
+  <td>
+    <span class="badge badge-<%= table_badge_show table_manage %>"><%= table_status_show table_manage %></span>
+  </td>
+  <td><%= table_manage.created_at.strftime(Settings.manage_tables.format_date) %></td>
+</tr>
