@@ -12,7 +12,11 @@ Rails.application.routes.draw do
       resources :table_manage
     end
     get "/account_activations/:id/edit", to: "account_activations#edit", as: "edit_account_activation"
+    get "/login", to: "session#new"
+    post "/login", to: "session#create"
+    delete "/logout", to: "session#destroy"
     resources :users
     resources :dishes, only: :index
+    resources :book_tables
   end
 end

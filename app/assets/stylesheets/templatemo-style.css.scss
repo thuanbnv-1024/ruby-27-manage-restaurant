@@ -354,8 +354,8 @@ section#book-table .left-image img {
 }
 
 .right-info input {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 12px;
+	margin-bottom: 20px;
 	box-shadow: none;
 	outline: none;
 	border-right: none;
@@ -364,9 +364,10 @@ section#book-table .left-image img {
 	border-bottom: 1px solid #eee;
 	font-size: 14px;
 	color: #9a9a9a;
+  height: 50px;
 }
 
-.right-info button {
+.right-info button, .btn {
 	width: 100%;
 	display: inline-block;
 	background-color: #f2745f;
