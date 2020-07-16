@@ -11,7 +11,7 @@ require("channels")
 require("packs/main")
 require("packs/ajax")
 require("jquery")
-
+require("packs/scroll")
 require("packs/plugins")
 require("packs/vendor/bootstrap")
 require("packs/vendor/bootstrap.min")
