@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   belongs_to :department, optional: true
+  has_many :book_table
 
   delegate :name, to: :department, prefix: :department
 
@@ -50,11 +51,8 @@ class User < ApplicationRecord
     end
   end
 
-  def authenticated? attribute, token
-    digest = send "#{attribute}_digest"
-    return false unless digest
-
-    BCrypt::Password.new(digest).is_password? token
+  def authenticated? remember_token
+    BCrypt::Password.new(remember_digest).is_password? remember_token
   end
 
   def activate

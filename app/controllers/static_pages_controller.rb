@@ -1,3 +1,5 @@
 class StaticPagesController < ApplicationController
-  def index; end
+  def index
+    @book_tables = BookTable.new
+  end
 end

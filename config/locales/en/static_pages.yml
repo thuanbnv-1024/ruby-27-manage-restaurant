@@ -4,6 +4,8 @@ en:
     menu: "Menu"
     contact: "Contact"
     blog: "Blog"
+    login: "Login"
+    logout: "Logout"
   footer:
     copyright: "Copyright 2017 Victory Template"
     author: "Victory Template"
@@ -28,3 +30,7 @@ en:
       featured_food: "Weekly Featured Food"
       sign_up: "Signup for our newsletters"
       sign_up_submit: "Send Message"
+  book_tables:
+    create_success: "Success"
+    create_error: "Error"
+    person: "Persons"

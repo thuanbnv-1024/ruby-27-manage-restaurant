@@ -1,0 +1,18 @@
+<%= form_for @book_tables do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <fieldset>
+        <%= datetime_local_field("book_table", "start_time", required: true)%>
+        <p id="error_explanation"><%= show_errors(f, :start_time) %></p>
+      </fieldset>
+    </div>
+    <div class="col-md-6">
+      <%= f.number_field :person, class: "person", placeholder: t("book_tables.person") %>
+    </div>
+    <div class="col-md-6">
+      <fieldset>
+        <%= f.submit t("static_pages.index.book_table_submit"), class: "btn" %>
+      </fieldset>
+    </div>
+  </div>
+<% end %>
