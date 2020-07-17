@@ -11,6 +11,7 @@ users:
   per: 10
 dish_types:
   format_date: "%d/%m/%Y"
+  format_time: "%H:%M"
 email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 admin_customer:
   per_page: 5

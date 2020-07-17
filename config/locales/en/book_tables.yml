@@ -1,0 +1,15 @@
+en:
+  book_tables:
+    pending: "Pending"
+    checked: "Checked"
+    received: "Received"
+    success: "Success"
+    cancel: "Cancel"
+    customer_name: "Customer name"
+    customer_phone: "Customer phone"
+    date_of_arrival: "Date of arrival"
+    arrival_time: "Arrival time"
+    status: "Status"
+    action: "Action"
+    list_book_table: "List of book table"
+    person: "Persons"

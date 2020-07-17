@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   belongs_to :department, optional: true
-  has_many :book_table
+  has_many :book_table, dependent: :destroy
 
   delegate :name, to: :department, prefix: :department
 
