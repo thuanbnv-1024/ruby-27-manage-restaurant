@@ -19,7 +19,7 @@ class BookTablesController < ApplicationController
   private
 
   def book_table_params
-    params.require(:book_table).permit BookTable::BOOKTABLE_PARAMS
+    params.require(:book_table).permit BookTable::BOOK_TABLE_PARAMS
   end
 
   def check_login

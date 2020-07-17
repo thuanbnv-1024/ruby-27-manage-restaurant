@@ -1,0 +1,19 @@
+<tr>
+  <th scope="row"><%= book_table_counter + 1 %></th>
+  <td><%= book_table.user.name %></td>
+  <td>
+    <%= book_table.user.phone %>
+  </td>
+  <td><%= book_table.start_time.strftime(Settings.dish_types.format_date) %></td>
+  <td><%= book_table.start_time.strftime(Settings.dish_types.format_time) %></td>
+  <td>
+    <span class="<%= load_status_book_table book_table.status %>"><%= t "book_tables.#{book_table.status}" %></span>
+  </td>
+  <td>
+    <div class="btn-group">
+      <%= link_to edit_admin_book_table_path(book_table), class: "btn btn-warning", title: t("dish_types.edit") do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+    </div>
+  </td>
+</tr>
