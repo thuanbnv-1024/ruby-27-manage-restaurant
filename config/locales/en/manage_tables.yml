@@ -1,5 +1,5 @@
 en:
-  manage_tables:
+  table_manage:
     title: "Table on/off"
     number_table: "Number of table"
     number_seat: "Number seat"
@@ -7,3 +7,4 @@ en:
     time: "Time"
     table_on: "On"
     table_off: "Off"
+    name: "Table manage"
