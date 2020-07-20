@@ -66,3 +66,17 @@ vi:
         delete: "Xóa"
       find_user:
         danger: "Không tồn tại"
+book_tables:
+    pending: "Chờ xử lý"
+    checked: "Đã kiểm tra"
+    received: "Đã nhận bàn"
+    success: "Hoàn thành"
+    cancel: "Hủy"
+    customer_name: "Tên khách hàng"
+    customer_phone: "Số điện thoại"
+    date_of_arrival: "Ngày đến"
+    arrival_time: "Giờ đến"
+    status: "Trạng thái"
+    action: "Hành động"
+    list_book_table: "Danh sách đặt bàn"
+    person: "Số người"

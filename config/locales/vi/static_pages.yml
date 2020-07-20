@@ -34,3 +34,5 @@ vi:
     create_success: "Thành công"
     create_error: "Thất bại"
     person: "Số người"
+    info: "Thông tin"
+    account: "Tài khoản"

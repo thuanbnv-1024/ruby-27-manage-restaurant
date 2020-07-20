@@ -28,7 +28,15 @@
               </div>
             </li>
             <% if logged_in %>
-              <li><%= link_to t("header.logout"), logout_path, method: :delete %></li>
+              <li>
+                <div class="dropdown">
+                  <%= link_to t("book_tables.account"), "#" %>
+                  <div class="dropdown-content">
+                     <p><%= link_to t("book_tables.info"), users_path %></p>
+                     <p><%= link_to t("header.logout"), logout_path, method: :delete %></p>
+                  </div>
+                </div>
+              </li>
             <% else %>
               <li><%= link_to t("header.login"), login_path %></li>
             <% end %>

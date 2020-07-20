@@ -1,0 +1,12 @@
+<tr class="success">
+  <th scope="row"><%= book_table_counter + 1 %></th>
+  <td><%= book_table.user_name %></td>
+  <td>
+    <%= book_table.user_phone %>
+  </td>
+  <td><%= book_table.start_time.strftime(Settings.dish_types.format_date) %></td>
+  <td><%= book_table.start_time.strftime(Settings.dish_types.format_time) %></td>
+  <td>
+    <span class="<%= status_book_table book_table.status %>"><%= t "book_tables.#{book_table.status}" %></span>
+  </td>
+</tr>

@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  include ApplicationHelper
+
+  def index
+    @book_tables = BookTable.page(params[:page]).per Settings.dishes.per_page
+  end
+
   def new
     @user = User.new
   end
