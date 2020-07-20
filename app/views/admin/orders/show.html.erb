@@ -1,0 +1,12 @@
+<div class="tm-paging-links">
+  <nav>
+    <ul>
+      <li class="tm-paging-item"><a href="#" class="tm-paging-link active"><%= t "order.list_food"%></a></li>
+    </ul>
+  </nav>
+</div>
+<div class="row tm-gallery">
+  <div id="tm-gallery-page-pizza" class="tm-gallery-page">
+    <%= render partial: "order_item", collection: @order.order_items %>
+  </div>
+</div>

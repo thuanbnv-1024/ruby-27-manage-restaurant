@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :users
       resources :table_manage
       resources :book_tables, only: %i(index edit update)
+      resources :orders, only: %i(index show update)
     end
     get "/account_activations/:id/edit", to: "account_activations#edit", as: "edit_account_activation"
     get "/login", to: "session#new"
