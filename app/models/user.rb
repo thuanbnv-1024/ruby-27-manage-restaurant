@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   delegate :name, to: :department, prefix: :department
 
-  enum role: {admin: 0, user: 1, customer: 2}, gender: {man: 0, women: 1}
+  enum role: {admin: 0, user: 1, customer: 2}, gender: {man: 0, women: 1}, activated: {not_active: 0, active: 1}
 
   VALID_EMAIL_REGEX = Settings.email_regex
   PERMIT_ATTRIBUTES = %i(name email password password_confirmation address
@@ -34,6 +34,10 @@ class User < ApplicationRecord
   validates :password, length: {minimum: Settings.user.password.min_length},
             allow_nil: true
 
+  scope :filter_by_name, ->(user_name){where("name LIKE '%#{user_name}%'") if user_name.present?}
+  scope :filter_by_email, ->(user_email){where "email LIKE '%#{user_email}%'" if user_email.present?}
+  scope :filter_by_address, ->(user_address){where "address LIKE '%#{user_address}%'" if user_address.present?}
+
   has_secure_password
 
   class << self
@@ -51,12 +55,11 @@ class User < ApplicationRecord
     end
   end
 
-  def authenticated? remember_token
-    BCrypt::Password.new(remember_digest).is_password? remember_token
-  end
+  def authenticated? attribute, token
+    digest = send "#{attribute}_digest"
+    return false unless digest
 
-  def activate
-    update activated: true
+    BCrypt::Password.new(digest).is_password? token
   end
 
   def send_activation_email

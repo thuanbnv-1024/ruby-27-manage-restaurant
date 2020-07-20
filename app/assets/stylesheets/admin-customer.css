@@ -20,3 +20,12 @@
 .form-inline {
  margin-bottom: 10px;
 }
+
+.admin_customer_form input{
+  margin-right: 15px;
+}
+
+.admin_customer_form input[type="submit"]{
+  background-color: blue;
+  color: white;
+}
