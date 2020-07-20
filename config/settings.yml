@@ -32,3 +32,5 @@ dishes:
 manage_tables:
   format_date: "On %I:%M%p %m/%d/%Y"
   per_page: 5
+orders:
+  per_page: 5

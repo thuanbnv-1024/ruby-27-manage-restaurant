@@ -1,0 +1,19 @@
+vi:
+  order:
+    order_success: "Hoàn thành"
+    order_not_success: "Chưa hoàn thành"
+    number_table: "Số bàn"
+    total_money: "Tổng tiền"
+    staff: "Nhân viên"
+    status: "Trạng thái"
+    action: "Hành động"
+    list_food: "Danh sách món"
+    infor_kitchen: "Thông tin nhà bếp"
+    update_fail: "Không thành công"
+    update_success: "Đã được cập nhật"
+    not_found: "Không tìm thấy thực đơn"
+    title: "Quản lý bếp"
+    order_item_not_found: "Không tìm thấy món hoặc đã được cập nhật"
+  order_item:
+    order_item_success: "Hoàn thành"
+    order_item_pending: "Đang chờ"
