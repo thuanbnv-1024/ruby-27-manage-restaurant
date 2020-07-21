@@ -1,3 +1,4 @@
+@import "color.scss";
 /*
 
 Victory Template
@@ -1294,6 +1295,7 @@ section.map #map {
 .product-img img {
   width: 100%;
   margin-bottom: 10px;
+  height: 180px;
 }
 
 .product-img span{
@@ -1326,4 +1328,20 @@ section.map #map {
 
 .shop-layout{
   margin-top: 20px;
+}
+
+.search-content {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.shop-layout h5 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fillter-search input[type="submit"]{
+  background-color: $darkblue;
 }

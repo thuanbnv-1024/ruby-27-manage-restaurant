@@ -10,4 +10,7 @@ class Dish < ApplicationRecord
   scope :search, (lambda do |param|
     where("name LIKE '%#{param}%'").or(where("description LIKE '%#{param}%'")) if param.present?
   end)
+  scope :fillter_by_price, (lambda do |price_min, price_max|
+    where("price BETWEEN #{price_min} AND #{price_max} ") if price_min.present? && price_max.present?
+  end)
 end
