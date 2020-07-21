@@ -1,4 +1,6 @@
 module ApplicationHelper
+  STATUS = {pending: "warning", checked: "info", received: "primary", success: "success", cancel: "danger"}
+
   def show_errors form_builder, field_name
     object = form_builder.object
     return unless object.errors.any?
@@ -14,5 +16,9 @@ module ApplicationHelper
     return if object.errors.blank?
 
     object.errors.messages[field_name].present? ? "errors_textfield" : ""
+  end
+
+  def status_book_table book_table_status
+    "label label-#{STATUS[book_table_status.to_sym]}"
   end
 end

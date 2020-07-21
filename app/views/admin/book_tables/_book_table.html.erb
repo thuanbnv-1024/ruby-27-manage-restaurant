@@ -1,8 +1,8 @@
 <tr>
   <th scope="row"><%= book_table_counter + 1 %></th>
-  <td><%= book_table.user.name %></td>
+  <td><%= book_table.user_name %></td>
   <td>
-    <%= book_table.user.phone %>
+    <%= book_table.user_phone %>
   </td>
   <td><%= book_table.start_time.strftime(Settings.dish_types.format_date) %></td>
   <td><%= book_table.start_time.strftime(Settings.dish_types.format_time) %></td>

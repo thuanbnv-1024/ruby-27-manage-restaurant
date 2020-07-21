@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="list clearfix">
+      <div class="float-left">
+        <h1 class="title-list"><%= t "book_tables.list_book_table" %></h1>
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col"><%= t "book_tables.customer_name" %></th>
+          <th scope="col"><%= t "book_tables.customer_phone" %></th>
+          <th scope="col"><%= t "book_tables.date_of_arrival" %></th>
+          <th scope="col"><%= t "book_tables.arrival_time" %></th>
+          <th scope="col"><%= t "book_tables.status" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "users/book_table",  collection: @book_tables, as: "book_table" %>
+      </tbody>
+    </table>
+    <%= paginate @book_tables, theme: "twitter-bootstrap-3" %>
+</div>
