@@ -16,3 +16,7 @@
 .errors_textfield {
   border-color: red;
 }
+
+.form-inline {
+ margin-bottom: 10px;
+}
