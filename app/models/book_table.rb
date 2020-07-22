@@ -7,5 +7,5 @@ class BookTable < ApplicationRecord
   enum status: {pending: 0, checked: 1, received: 2,
                 success: 3, cancel: 4}
 
-  scope :sort_status, ->{order "status ASC"}
+  scope :sort_status, ->{order status: :asc}
 end

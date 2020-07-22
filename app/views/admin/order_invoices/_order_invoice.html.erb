@@ -1,0 +1,15 @@
+ <tr>
+  <th scope="row"><%= order_invoice_counter + 1 %></th>
+  <th scope="row"><%= order_invoice.dinner_table_table_number %></th>
+  <td><%= number_to_currency order_invoice.total %></td>
+  <td>
+    <span class="<%= load_status_order order_invoice.status %>"><%= t "order.#{order_invoice.status}" %></span>
+  </td>
+  <td>
+    <% if order_invoice.processing? %>
+      <%= link_to t("order.pay"), edit_admin_order_invoice_path(order_invoice), class: "btn btn-primary" %>
+    <% else %>
+      <%= link_to t("order.view"), admin_order_invoice_path(order_invoice), class: "btn btn-warning" %>
+    <% end %>
+  </td>
+</tr>

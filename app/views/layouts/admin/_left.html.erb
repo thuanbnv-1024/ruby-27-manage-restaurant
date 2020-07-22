@@ -39,6 +39,10 @@
           <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
           <%= t "order.title" %>
         <% end %>
+         <%= link_to admin_order_invoices_path, class: "nav-link" do %>
+          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <%= t "order.pay" %>
+        <% end %>
       </div>
     </div>
     <div class="sb-sidenav-footer">

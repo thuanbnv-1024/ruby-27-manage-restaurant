@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 2020_07_21_084750) do
     t.decimal "total", precision: 65
     t.decimal "subtotal", precision: 65
     t.bigint "dinner_table_id", null: false
+    t.integer "status", default: 0
     t.index ["dinner_table_id"], name: "index_orders_on_dinner_table_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end

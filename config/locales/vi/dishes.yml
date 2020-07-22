@@ -7,6 +7,11 @@ vi:
     price: "Giá"
     image: "Hình ảnh"
     update_success: "Cập nhật thành công"
+    name_search: "Nhập tên"
+    price_from: "Từ giá"
+    price_to: "đến giá"
+    search: "Tìm kiếm"
+    comfirm: "Xác nhận xóa"
   image:
     image_type: "File bạn muốn tải lên không đúng định dạng!"
     add_a_image: "Thêm ảnh"

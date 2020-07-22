@@ -3,11 +3,11 @@
   <td><%= dish.name %></td>
   <td>
     <% if dish.images.present? %>
-    <%= image_tag dish.images.first.image.url, class: "image-dish" %>
+      <%= image_tag dish.images.first.image.url, class: "image-dish" %>
     <% end %>
   </td>
   <td><%= dish.description %></td>
-  <td><%= dish.price %></td>
+  <td><%= number_to_currency dish.price %></td>
   <td>
     <span class="btn btn-<%= load_status dish %>"><%= load_text_status dish %></span>
   </td>
@@ -16,7 +16,7 @@
       <%= link_to edit_admin_dish_path(dish), class: "btn btn-warning", title: t("dish_types.edit") do %>
         <i class="fa fa-edit"></i>
       <% end %>
-      <%= link_to [:admin, dish], method: :delete, title: t("dish_types.delete"), class: "btn btn-danger" do %>
+      <%= link_to [:admin, dish], method: :delete, data: { confirm: t("dishes.comfirm") }, title: t("dish_types.delete"), class: "btn btn-danger" do %>
         <i class="fas fa-trash-alt"></i>
       <% end %>
     </div>
