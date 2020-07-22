@@ -1,0 +1,42 @@
+<div class="order_items">
+  <h1><%= t "order.order_details" %></h1>
+  <%= form_for [:admin, @order_invoice] do |f| %>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <%= f.label t("order.number_table") %>
+        <p><span class="form-control", readonly="true"><%= @order_invoice.dinner_table_table_number %></span></p>
+      </div>
+      <div class="form-group col-md-6">
+        <%= f.label t("order.payment_method") %>
+        <p><span class="form-control", readonly="true"><%= t("order.#{@order_invoice.payment_method}") %></span></p>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label t("order.order_details") %>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col"><%= t "order.name" %></th>
+            <th scope="col"><%= t "order.price" %></th>
+            <th scope="col"><%= t "order.amount" %></th>
+            <th scope="col"><%= t "order.total" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @order_invoice_show.each do |item| %>
+            <tr>
+              <td><%= item.dish.name %></td>
+              <td><%= number_to_currency item.dish.price %></td>
+              <td><%= item.quantity %></td>
+              <td><%= number_to_currency item.total %></td>
+            </tr>
+          <% end %>
+          <tr>
+            <th colspan="3"><%= t "order.total" %></th>
+            <th><span><%= number_to_currency @order_invoice.total %></span></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>

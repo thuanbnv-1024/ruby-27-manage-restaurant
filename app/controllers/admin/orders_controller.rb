@@ -26,4 +26,8 @@ class Admin::OrdersController < AdminController
     flash[:danger] = t "order.not_found"
     redirect_to admin_orders_path
   end
+
+  def order_params
+    params.require(:order).permit Order::ORDER_PARAMS
+  end
 end

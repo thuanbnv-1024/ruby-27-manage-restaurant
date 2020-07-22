@@ -8,7 +8,7 @@
     <div class="form-group col-md-6">
       <%= f.label :dish_type_id, t("dishes.list_dishes") %>
       <br/>
-      <%= f.collection_select :dish_type_id, DishType.dish_types, :id, :name, {}, {class: "form-control"} %>
+      <%= f.collection_select :dish_type_id, DishType.order_by_dish_type, :id, :name, {}, {class: "form-control"} %>
     </div>
   </div>
   <div class="form-row">
