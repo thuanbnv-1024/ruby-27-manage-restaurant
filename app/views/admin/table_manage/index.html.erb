@@ -2,18 +2,10 @@
 <%= form_tag admin_table_manage_index_path, method: :get, class: "form-inline", id: "option_form" do %>
   <%= select_tag :option_status, options_for_select(DinnerTable.statuses, selected: params[:option_status]), class: "form-control", include_blank: true %>
 <% end %>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col"><%= t "table_manage.number_table" %></th>
-      <th scope="col"><%= t "table_manage.number_seat" %></th>
-      <th scope="col"><%= t "table_manage.status" %></th>
-      <th scope="col"><%= t "table_manage.time" %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render partial: "table_manage", collection: @table_manage %>
-  </tbody>
-</table>
+<div class="row table_manage">
+  <div class="col-md-12">
+    <h2><%= t "table_manage.total_table" %> (<span><%= @table_manage.size %></span>)</h2>
+  </div>
+  <%= render partial: "table_manage", collection: @table_manage %>
+</div>
 <%= paginate @table_manage, theme: "twitter-bootstrap-3" %>

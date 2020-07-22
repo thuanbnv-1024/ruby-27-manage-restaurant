@@ -31,7 +31,7 @@ dishes:
   per_page: 5
 manage_tables:
   format_date: "On %I:%M%p %m/%d/%Y"
-  per_page: 5
+  per_page: 8
 orders:
   per_page: 5
   complete: "complete"

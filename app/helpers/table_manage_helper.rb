@@ -4,6 +4,6 @@ module TableManageHelper
   end
 
   def table_status_show table
-    table.using? ? t("manage_tables.table_on") : t("manage_tables.table_off")
+    table.using? ? t("table_manage.table_on") : t("table_manage.table_off")
   end
 end
