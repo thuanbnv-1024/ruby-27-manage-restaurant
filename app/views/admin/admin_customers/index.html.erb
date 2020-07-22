@@ -1,6 +1,14 @@
 <div class="list">
   <h1><%= t "admin_customer.all_customer" %></h1>
 </div>
+<div class="admin_customer_form">
+  <%= form_tag  admin_admin_customers_path, method: :get, class: "form-inline" do %>
+    <%= text_field_tag :customer_name, nil, placeholder: t("admin_customer.placeholder_name"), value: params[:customer_name], class: "form-control" %>
+    <%= text_field_tag :customer_email, nil, placeholder: t("admin_customer.placeholder_email"), value: params[:customer_email], class: "form-control" %>
+    <%= text_field_tag :customer_address, nil, placeholder: t("admin_customer.placeholder_address"), value: params[:customer_address], class: "form-control" %>
+    <%= submit_tag t("admin_customer.button_search"), class: "form-control" %>
+  <% end %>
+</div>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -9,6 +17,7 @@
       <th scope="col"><%= t "admin_customer.email" %></th>
       <th scope="col"><%= t "admin_customer.phone" %></th>
       <th scope="col"><%= t "admin_customer.address" %></th>
+      <th scope="col"><%= t "admin_customer.status" %></th>
       <th scope="col"><%= t "admin_customer.action" %></th>
     </tr>
   </thead>
@@ -16,4 +25,4 @@
     <%= render partial: "admin_customers", collection: @admin_customers %>
   </tbody>
 </table>
-<%= paginate @admin_customers %>
+<%= paginate @admin_customers, theme: "twitter-bootstrap-3"%>

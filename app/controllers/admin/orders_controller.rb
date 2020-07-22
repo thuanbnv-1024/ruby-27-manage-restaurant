@@ -13,7 +13,7 @@ class Admin::OrdersController < AdminController
     status = false
     order_item.success! && status = true if order_item&.pending?
     respond_to do |format|
-      format.js {render json: { status: status }}
+      format.js{render json: {status: status}}
     end
   end
 
