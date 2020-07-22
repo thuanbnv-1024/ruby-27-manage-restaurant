@@ -6,6 +6,7 @@ en:
     blog: "Blog"
     login: "Login"
     logout: "Logout"
+    dishes: "List dishes"
   footer:
     copyright: "Copyright 2017 Victory Template"
     author: "Victory Template"
