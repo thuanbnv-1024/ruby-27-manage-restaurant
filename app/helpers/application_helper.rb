@@ -1,5 +1,5 @@
 module ApplicationHelper
-  STATUS = {pending: "warning", checked: "info", received: "primary", success: "success", cancel: "danger"}
+  STATUS = {pending: "warning", checked: "info", received: "primary", success: "success", cancel: "danger"}.freeze
 
   def show_errors form_builder, field_name
     object = form_builder.object
