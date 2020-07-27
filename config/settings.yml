@@ -37,3 +37,4 @@ orders:
   complete: "complete"
 table:
   numb: 20
+  dish: 4

@@ -13,4 +13,16 @@ class Order < ApplicationRecord
   scope :order_by_dish_type, ->{order name: :asc}
   scope :order_by_status, ->{order status: :asc}
   scope :search_table_orders, ->(table){where "dinner_table_id = ?", table if table.present?}
+
+  before_save :update_subtotal
+
+  private
+
+  def subtotal
+    order_items.map{|order_item| order_item.valid? ? (order_item.quantity * order_item.send(:unit_price)) : 0}.sum
+  end
+
+  def update_subtotal
+    self[:subtotal] = subtotal
+  end
 end

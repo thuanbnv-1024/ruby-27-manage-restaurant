@@ -1,5 +1,7 @@
 vi:
   dinner_tables:
+    find_order:
+      danger: "Không tồn tại"
     free: "Trống"
     using: "Đang ăn"
     name_table: "Bàn"

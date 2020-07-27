@@ -1,5 +1,7 @@
 en:
   dinner_tables:
+    find_order:
+      danger: "Does not exist order"
     free: "Free"
     using: "Using"
     name_table: "Tabel"
