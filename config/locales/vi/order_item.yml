@@ -1,0 +1,6 @@
+vi:
+  order_items:
+    index:
+      success: "Hoàn thành"
+      pending: "Đang chế biến"
+      back: "Quay lại"

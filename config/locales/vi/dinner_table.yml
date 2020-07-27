@@ -2,6 +2,8 @@ vi:
   dinner_tables:
     find_order:
       danger: "Không tồn tại"
+    find_dinner_table:
+      danger: "Không tồn tại"
     free: "Trống"
     using: "Đang ăn"
     name_table: "Bàn"
@@ -29,3 +31,6 @@ vi:
     destroy:
       success: "Đã kết thúc phiên làm việc của bàn"
       danger: "Kết thúc phiên làm việc thất bại!"
+    update_atributes:
+      info: "Cập nhật thành công!"
+      danger: "Cập nhật thất bại!"
