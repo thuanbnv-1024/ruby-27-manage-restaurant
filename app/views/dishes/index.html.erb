@@ -9,29 +9,50 @@
   </div>
 </section>
 <div class="container">
-  <div class="row">
+  <div class="row search-content">
     <div class="col-md-4">
       <div class="shop-sidebar">
-        <h3><%= t("search.category") %></h3>
+        <h3><%= t "search.filter" %></h3>
         <ul class="size">
+          <div class="fillter-search">
+            <%= form_tag( dishes_path, method: :get) do %>
+              <%= text_field_tag :search, nil, placeholder: t("search.search_name"), value: params[:search], class: "form-control" %>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <%= number_field_tag :price_min, nil, value: params[:price_min], placeholder: t("search.search_price_min"), class: "form-control" %>
+                </div>
+                <div class="form-group col-md-6">
+                  <%= number_field_tag :price_max, nil, value: params[:price_max], placeholder: t("search.search_price_max"), class: "form-control" %>
+                </div>
+              </div>
+              <%= submit_tag t("search.search_button"), class: "btn btn-primary" %>
+            <% end %>
+          </div>
         </ul>
       </div>
       <div class="shop-sidebar clearfix">
         <h3><%= t("search.category") %></h3>
         <ul class="cat">
+          <li><a href=""><%= t("search.breakfast") %></a></li>
+          <li><a href=""><%= t("search.lunch") %></a></li>
+          <li><a href=""><%= t("search.dinner") %></a></li>
+          <li><a href=""><%= t("search.dessert") %></a></li>
         </ul>
       </div>
     </div>
     <div class="col-md-8">
       <div class="shop-layout">
         <div class="shop-layout-bar clearfix"></div>
+          <h5><%= t "search.search_result" %> <%= @dishs.total_count %></h5>
           <% @dishs.each do |dish| %>
             <div class="row">
               <div class="col-md-4">
                 <div class="product-wrapper">
                   <div class="product-img">
                     <a href="#">
-                      <img src="https://vcdn-dulich.vnecdn.net/2020/04/02/banhmi-2678-1585830175.png" alt="">
+                      <% if dish.images.present? %>
+                        <%= image_tag dish.images.first.image.url %>
+                      <% end %>
                     </a>
                     <span><%= t("search.hot") %></span>
                   </div>
@@ -42,8 +63,8 @@
                   <h3><a href="#"><%= dish.name %></a></h3>
                   <p><%= dish.description %></p>
                   <div class="price">
-                    <span><%= dish.price %> vnđ</span>
-                    <span><del>$ 1.000.100vnđ</del></span>
+                    <span><%= number_to_currency(dish.price, unit: "vnđ") %> </span>
+                    <span><del></del></span>
                   </div>
                   <div class="shop-list-action">
                     <div class="cart-btn">
@@ -59,6 +80,7 @@
             </div>
           </div>
         <% end %>
+        <%= paginate @dishs, theme: "twitter-bootstrap-3" %>
       </div>
     </div>
   </div>
