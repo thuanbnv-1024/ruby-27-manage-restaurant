@@ -1,10 +1,11 @@
 en:
   table_manage:
     title: "Table on/off"
-    number_table: "Number of table"
-    number_seat: "Number seat"
+    number_table: "Number of table: "
+    number_seat: "Number seat: "
     status: "Status"
     time: "Time"
     table_on: "On"
     table_off: "Off"
     name: "Table manage"
+    total_table: "Total of table"

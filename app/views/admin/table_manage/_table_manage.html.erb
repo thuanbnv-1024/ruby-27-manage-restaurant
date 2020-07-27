@@ -1,9 +1,15 @@
-<tr>
-  <th scope="row"><%= table_manage_counter + 1 %></th>
-  <td><%= table_manage.table_number %></td>
-  <td><%= table_manage.number_seats %></td>
-  <td>
-    <span class="badge badge-<%= table_badge_show table_manage %>"><%= table_status_show table_manage %></span>
-  </td>
-  <td><%= table_manage.created_at.strftime(Settings.manage_tables.format_date) %></td>
-</tr>
+<div class="col-md-3">
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <p><%= t "table_manage.number_table" %><%= table_manage.table_number %></p>
+      </div>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><p><%= t "table_manage.number_seat" %><%= table_manage.number_seats %></p></h5>
+      <div class="button-status">
+         <span class="badge badge-<%= table_badge_show table_manage %>"><%= table_status_show table_manage %></span>
+      </div>
+    </div>
+  </div>
+</div>
