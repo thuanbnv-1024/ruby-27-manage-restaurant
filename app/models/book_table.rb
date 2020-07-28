@@ -4,13 +4,11 @@ class BookTable < ApplicationRecord
 
   delegate :name, :phone, to: :user, prefix: true
 
-  enum status: {
-                  pending: 0,
-                  checked: 1,
-                  received: 2,
-                  success: 3,
-                  cancel: 4
-                }
+  enum status: {pending: 0,
+                checked: 1,
+                received: 2,
+                success: 3,
+                cancel: 4}
 
   scope :sort_status, ->{order status: :asc}
 end

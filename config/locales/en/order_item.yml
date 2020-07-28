@@ -1,0 +1,6 @@
+en:
+  order_items:
+    index:
+      success: "Done"
+      pending: "Pending"
+      back: "Back"

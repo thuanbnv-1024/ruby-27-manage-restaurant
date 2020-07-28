@@ -16,11 +16,11 @@ class Order < ApplicationRecord
 
   before_save :update_subtotal
 
-  private
-
   def subtotal
     order_items.map{|order_item| order_item.valid? ? (order_item.quantity * order_item.send(:unit_price)) : 0}.sum
   end
+
+  private
 
   def update_subtotal
     self[:subtotal] = subtotal

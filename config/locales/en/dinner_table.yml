@@ -2,6 +2,8 @@ en:
   dinner_tables:
     find_order:
       danger: "Does not exist order"
+    find_dinner_table:
+      danger: "Does not exist dinner tabler"
     free: "Free"
     using: "Using"
     name_table: "Tabel"
@@ -29,3 +31,6 @@ en:
     destroy:
       success: "Đã kết thúc phiên làm việc của bàn"
       danger: "Kết thúc phiên làm việc thất bại!"
+    update_atributes:
+      info: "Update successfully!"
+      danger: "Update fail!"
