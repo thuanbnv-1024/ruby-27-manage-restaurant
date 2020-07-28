@@ -8,11 +8,9 @@ $('.notification').html('')
   <% end %>
   $('.notification').append('<div class="alert alert-danger"><%= t ".danger" %></div>')
 <% else %>
-  $('.tbody').append('<%= j render "user", user: @user %>')
-  $('.tbody-user tr').each(function(i, tr) {
-    var sttTable = i + 1
-    $('.tbody-user tr:nth-child(' + sttTable + ')').find('.row-id').text(sttTable);
-  })
+  $('.row-user-<%= @user.id %>').find('.name').html('<%= @user.name %>')
+  $('.row-user-<%= @user.id %>').find('.department').html('<%= @user.department_name %>')
+  $('#myModal-show-user-<%= @user.id %>').html('<%= j render "show", user: @user %>')
   $('#myModal-form-user').modal('hide')
   $('.notification').append('<div class="alert alert-success"><%= t ".success" %></div>')
 <% end %>

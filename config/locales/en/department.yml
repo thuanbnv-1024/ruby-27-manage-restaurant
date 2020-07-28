@@ -11,7 +11,7 @@ en:
         description_staff: "Description"
         quantity_staff: "Quantity"
         action_staff: "Action"
-      new:
+      form:
         button: "Submit"
         name: "Name"
         description: "Description"
