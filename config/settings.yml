@@ -30,6 +30,9 @@ user:
 dishes:
   per_page: 4
   status: "in_stock"
+  price:
+    max_length: 10
+    min_value: 0
 manage_tables:
   format_date: "On %I:%M%p %m/%d/%Y"
   per_page: 8

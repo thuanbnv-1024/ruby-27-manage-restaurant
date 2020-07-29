@@ -6,6 +6,11 @@ class Dish < ApplicationRecord
   has_many :images, dependent: :destroy
   has_many :order_item, dependent: :delete_all
 
+  validates :name,  presence: true
+  validates :price, numericality:
+            {greater_than_or_equal_to: Settings.dishes.price.min_value},
+             length: {maximum: Settings.dishes.price.max_length}
+
   accepts_nested_attributes_for :images, allow_destroy: true, reject_if: :all_blank
 
   enum status: {out_of_stock: 0, in_stock: 1}
