@@ -4,7 +4,7 @@ vi:
     create_error: "Thêm danh mục thất bại"
     update_success: "Cập nhật danh mục thành công"
     update_error: "Cập nhật danh mục thất bại"
-    delete_success: "Xóa nhật danh mục thành công"
+    delete_success: "Xóa danh mục thành công"
     delete_error: "Xóa danh mục thất bại"
     not_found: "Không tìm thấy danh mục"
     edit: "Chỉnh sửa"

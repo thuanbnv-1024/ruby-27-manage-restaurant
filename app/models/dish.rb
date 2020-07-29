@@ -4,6 +4,7 @@ class Dish < ApplicationRecord
 
   belongs_to :dish_type
   has_many :images, dependent: :destroy
+  has_many :order_item, dependent: :delete_all
 
   accepts_nested_attributes_for :images, allow_destroy: true, reject_if: :all_blank
 

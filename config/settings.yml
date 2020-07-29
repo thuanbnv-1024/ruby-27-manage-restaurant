@@ -29,6 +29,7 @@ user:
     min_length: 6
 dishes:
   per_page: 4
+  status: "in_stock"
 manage_tables:
   format_date: "On %I:%M%p %m/%d/%Y"
   per_page: 8
@@ -38,3 +39,8 @@ orders:
 table:
   numb: 20
   dish: 4
+role:
+  admin: "admin"
+  default_password: "Ngvanhao123"
+phone: "0123456789"
+birthday: "2020-07-13"
