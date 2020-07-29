@@ -1,18 +1,21 @@
 <div class="list_departments">
   <div class="notification"></div>
-  <div class="top-title">
-    <div class="title">
-      <h2><%= t "admin.departments.index.title_text" %></h2>
+  <div class="top-title clearfix">
+    <div class="title float-left">
+      <h2><%= t ".title_text" %></h2>
+    </div>
+    <div class="float-right">
+      <%= link_to t(".title"), new_admin_department_path, remote: true, class: "btn btn-primary" %>
     </div>
   </div>
   <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col"><%= t "admin.departments.index.name_staff" %></th>
-        <th scope="col"><%= t "admin.departments.index.description_staff" %></th>
-        <th scope="col"><%= t "admin.departments.index.quantity_staff" %></th>
-        <th scope="col"><%= t "admin.departments.index.action_staff" %></th>
+        <th scope="col"><%= t ".name_staff" %></th>
+        <th scope="col"><%= t ".description_staff" %></th>
+        <th scope="col"><%= t ".quantity_staff" %></th>
+        <th scope="col"><%= t ".action_staff" %></th>
       </tr>
     </thead>
     <tbody class="tbody" id="department-tbody">
@@ -20,8 +23,5 @@
     </tbody>
   </table>
 </div>
-
-<%= link_to t("admin.departments.department.new.title"), new_admin_department_path, remote: true, class: "btn btn-primary" %>
-
 <div class="modal" id="myModal">
 </div>

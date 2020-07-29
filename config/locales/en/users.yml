@@ -63,12 +63,28 @@ account:"
         activated: "Activated"
         gender: "Gender"
         submit: "Close"
+        man: "Man"
+        women: "Women"
+        active: "Active"
+        not_active: "Not active"
       user:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
       find_user:
         danger: "Does not exist"
+      update:
+        success: "Update successfully!"
+        danger: "Update fail!"
+      edit:
+        button_text: "Edit user"
+    session:
+      new:
+        login: "Login"
+      form:
+        email: "Email"
+        password: "Password"
+        submit: "Submit"
 book_tables:
     pending: "Pending"
     checked: "Checked"

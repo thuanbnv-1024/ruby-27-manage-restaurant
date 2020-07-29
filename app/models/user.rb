@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   belongs_to :department, optional: true
-  has_many :book_table, dependent: :destroy
+  has_many :book_tables, dependent: :destroy
 
   delegate :name, to: :department, prefix: :department
 
@@ -9,8 +9,8 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = Settings.email_regex
   PERMIT_ATTRIBUTES = %i(name email password password_confirmation address
                           birthday phone gender).freeze
-  USER_PARAMS = %i(name email address phone birthday department_id activated
-                   gender password password_confirmation).freeze
+  USER_PARAMS = %i(name email address phone birthday role activated
+                   department_id gender password password_confirmation).freeze
   CUSTOMER_UPDATE_PARAMS = %i(name address phone birthday gender
                            password password_confirmation).freeze
 
