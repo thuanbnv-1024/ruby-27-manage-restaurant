@@ -1,12 +1,12 @@
 FactoryBot.define do
-  factory :user do
-    name {Faker::Name.name}
-    email {Faker::Internet.email}
-    phone {Settings.phone}
-    address {Faker::Address.full_address}
-    password {Settings.role.default_password}
-    password_confirmation {Settings.role.default_password}
-    role {Settings.role.admin}
-    birthday {Settings.birthday}
+  factory :user do |f|
+    f.name {Faker::Name.name}
+    f.email {Faker::Internet.email}
+    f.password {"abc456"}
+    f.password_confirmation {"abc456"}
+    f.address {Faker::Address.city}
+    f.phone {1234567891}
+    f.birthday {Faker::Date.birthday}
+    f.role {"customer"}
   end
 end
