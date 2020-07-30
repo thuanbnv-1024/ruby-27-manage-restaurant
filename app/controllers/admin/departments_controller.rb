@@ -38,6 +38,6 @@ class Admin::DepartmentsController < AdminController
     return if @department
 
     flash[:danger] = t "find_department.danger"
-    redirect_to admin_departments_path @department
+    redirect_to admin_departments_path
   end
 end
