@@ -24,8 +24,8 @@ class User < ApplicationRecord
 
   validates :name, length: {maximum: Settings.user.name.max_length}
   validates :email, length: {maximum: Settings.user.email.max_length},
-            format: {with: VALID_EMAIL_REGEX},
-            uniqueness: true
+    format: {with: VALID_EMAIL_REGEX},
+    uniqueness: {case_sensitive: true}
   validates :address,
             length: {maximum: Settings.user.address.max_length}
   validates :phone, numericality: true,

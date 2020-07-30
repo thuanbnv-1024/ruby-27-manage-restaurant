@@ -5,5 +5,6 @@ FactoryBot.define do
     f.user {FactoryBot.create :user}
     f.dinner_table {FactoryBot.create :dinner_table}
     f.payment_method {"cash"}
+    f.order_items {[]}
   end
 end
