@@ -4,9 +4,10 @@ FactoryBot.define do
     f.email {Faker::Internet.email}
     f.password {"abc456"}
     f.password_confirmation {"abc456"}
-    f.address {Faker::Address.city}
+    f.address {"HN"}
     f.phone {1234567891}
-    f.birthday {Faker::Date.birthday}
+    f.birthday {"2020-12-12"}
     f.role {"customer"}
+    f.gender{"man"}
   end
 end
