@@ -27,9 +27,14 @@ gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
 
 group :development, :test do
+  gem "database_cleaner"
+  gem "factory_bot_rails"
   gem "pry-rails"
+  gem "rails-controller-testing"
+  gem "rspec-rails"
   gem "rubocop", "~> 0.74.0", require: false
   gem "rubocop-rails", "~> 2.3.2", require: false
+  gem "shoulda-matchers"
 end
 
 group :development do
@@ -41,13 +46,8 @@ end
 
 group :test do
   gem "capybara", ">= 2.15"
-  gem "database_cleaner"
-  gem "factory_bot_rails"
-  gem "rails-controller-testing"
-  gem "rspec-rails"
   gem "rspec-support"
   gem "selenium-webdriver"
-  gem "shoulda-matchers"
   gem "webdrivers"
 end
 
