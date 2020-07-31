@@ -34,10 +34,6 @@ class User < ApplicationRecord
   validates :password, length: {minimum: Settings.user.password.min_length},
             allow_nil: true
 
-  scope :filter_by_name, ->(user_name){where("name LIKE '%#{user_name}%'") if user_name.present?}
-  scope :filter_by_email, ->(user_email){where "email LIKE '%#{user_email}%'" if user_email.present?}
-  scope :filter_by_address, ->(user_address){where "address LIKE '%#{user_address}%'" if user_address.present?}
-
   has_secure_password
 
   class << self

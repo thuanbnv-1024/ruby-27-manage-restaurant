@@ -1,5 +1,4 @@
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
+@import 'color';
 
 .btn-group a{
   margin-right: 10px;
@@ -28,4 +27,8 @@
 .admin_customer_form input[type="submit"]{
   background-color: blue;
   color: white;
+}
+
+.sort_link {
+  color: $shark;
 }
