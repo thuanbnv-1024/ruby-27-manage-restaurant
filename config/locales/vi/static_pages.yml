@@ -31,6 +31,11 @@ vi:
       featured_food: "Món ăn nổi bật"
       sign_up: "Đăng kí nhận thông tin tại đây"
       sign_up_submit: "Gửi ngay"
+    send_email:
+      success: "Thông tin đã được gửi vào email của bạn"
+      placeholder_email: "Vui lòng nhập địa chỉ email..."
+      title: "Thông tin về nhà hàng"
+      subject: "Email được gửi từ nhà hàng"
   book_tables:
     create_success: "Thành công"
     create_error: "Thất bại"

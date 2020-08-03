@@ -1,3 +1,5 @@
+require "sidekiq/web"
+
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#index"
@@ -28,5 +30,7 @@ Rails.application.routes.draw do
     resources :dinner_tables
     resource :cart, only: :show
     resources :order_items
+    resources :email_information, only: :create
   end
+  mount Sidekiq::Web => "/sidekiq"
 end
