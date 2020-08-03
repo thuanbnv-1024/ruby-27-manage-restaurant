@@ -2,21 +2,21 @@
   <h1><%= t "admin_customer.all_customer" %></h1>
 </div>
 <div class="admin_customer_form">
-  <%= form_tag  admin_admin_customers_path, method: :get, class: "form-inline" do %>
-    <%= text_field_tag :customer_name, nil, placeholder: t("admin_customer.placeholder_name"), value: params[:customer_name], class: "form-control" %>
-    <%= text_field_tag :customer_email, nil, placeholder: t("admin_customer.placeholder_email"), value: params[:customer_email], class: "form-control" %>
-    <%= text_field_tag :customer_address, nil, placeholder: t("admin_customer.placeholder_address"), value: params[:customer_address], class: "form-control" %>
-    <%= submit_tag t("admin_customer.button_search"), class: "form-control" %>
+  <%= search_form_for @search_customer, url: admin_admin_customers_path,method: :get, class: "form-inline" do |f|%>
+    <%= f.text_field :name_cont, placeholder: t("admin_customer.placeholder_name"), class: "form-control" %>
+    <%= f.text_field :email_cont, placeholder: t("admin_customer.placeholder_email"), class: "form-control" %>
+    <%= f.text_field :address_cont, placeholder: t("admin_customer.placeholder_address"), class: "form-control" %>
+    <%= f.submit t("admin_customer.button_search"), class: "form-control" %>
   <% end %>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col"><%= t "admin_customer.id" %></th>
-      <th scope="col"><%= t "admin_customer.name" %></th>
-      <th scope="col"><%= t "admin_customer.email" %></th>
+      <th scope="col"><%= sort_link @search_customer, :name, t("admin_customer.name") %></th>
+      <th scope="col"><%= sort_link @search_customer, :email, t("admin_customer.email") %></th>
       <th scope="col"><%= t "admin_customer.phone" %></th>
-      <th scope="col"><%= t "admin_customer.address" %></th>
+      <th scope="col"><%= sort_link @search_customer, :address, t("admin_customer.address") %></th>
       <th scope="col"><%= t "admin_customer.status" %></th>
       <th scope="col"><%= t "admin_customer.action" %></th>
     </tr>
