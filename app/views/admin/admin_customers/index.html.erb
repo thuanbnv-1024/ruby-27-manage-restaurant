@@ -8,6 +8,11 @@
     <%= f.text_field :address_cont, placeholder: t("admin_customer.placeholder_address"), class: "form-control" %>
     <%= f.submit t("admin_customer.button_search"), class: "form-control" %>
   <% end %>
+  <div class="trash_soft_delete">
+    <%= link_to "?deleted_at=1", class: "btn btn-warning" do %>
+      <i class="fas fa-trash-restore-alt"></i>[<%= User.only_deleted.size %>]
+    <% end %>
+  </div>
 </div>
 <table class="table table-striped">
   <thead>
@@ -26,3 +31,4 @@
   </tbody>
 </table>
 <%= paginate @admin_customers, theme: "twitter-bootstrap-3"%>
+<%= link_to t("admin_customer.back"), admin_admin_customers_path , class: "btn btn-outline-info" %>

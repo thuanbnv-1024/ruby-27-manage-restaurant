@@ -20,6 +20,9 @@ vi:
       placeholder_email: "Nhập vào email..."
       placeholder_address: "Nhập vào address..."
       button_search: "Tìm kiếm"
+      back: "Quay lại"
+      restore_success: "Khôi phục tài khoản thành công"
+      page_not_found: "Không tìm thấy kết quả"
       edit:
         submit: "Cập nhật thông tin"
       update:

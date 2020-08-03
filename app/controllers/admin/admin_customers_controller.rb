@@ -1,10 +1,14 @@
 class Admin::AdminCustomersController < AdminController
   before_action :load_customer, only: %i(destroy edit update)
+  before_action :fetch_search_result, only: :index
 
   def index
-    @search_customer = User.customer.search(params[:q])
-    @admin_customers = @search_customer.result
+    @admin_customers = if params[:deleted_at].present?
+                         @search_result.only_deleted
                                        .page(params[:page]).per Settings.admin_customer.per_page
+                       else
+                         @search_result.page(params[:page]).per Settings.admin_customer.per_page
+                       end
   end
 
   def edit; end
@@ -29,6 +33,16 @@ class Admin::AdminCustomersController < AdminController
   end
 
   private
+
+  def fetch_search_result
+    @search_customer = User.customer.search params[:q]
+    if @search_customer.present?
+      @search_result = @search_customer.result
+    else
+      flash[:danger] = t "admin_customer.page_not_found"
+      redirect_to admin_admin_customers_path
+    end
+  end
 
   def customer_update_params
     params.require(:user).permit User::CUSTOMER_UPDATE_PARAMS
