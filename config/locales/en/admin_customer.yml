@@ -20,6 +20,9 @@ en:
     placeholder_email: "Input for email"
     placeholder_address: "Input for adress"
     button_search: "Search"
+    back: "Back"
+    restore_success: "Restore user success"
+    page_not_found: "Not found result"
     edit:
       submit: "Update"
     update:

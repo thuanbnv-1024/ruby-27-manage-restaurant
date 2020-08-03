@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_paranoid
   belongs_to :department, optional: true
   has_many :book_tables, dependent: :destroy
 

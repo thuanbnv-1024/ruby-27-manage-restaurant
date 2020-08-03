@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :book_tables, only: %i(index edit update)
       resources :orders, only: %i(index show update)
       resources :order_invoices
+      resources :restore_delete, only: :show
     end
     get "/account_activations/:id/edit", to: "account_activations#edit", as: "edit_account_activation"
     get "/login", to: "session#new"

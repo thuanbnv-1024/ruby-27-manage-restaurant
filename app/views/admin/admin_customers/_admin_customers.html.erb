@@ -16,6 +16,11 @@
         :method => :delete do %>
         <i class="fa fa-trash"></i>
       <% end %>
+      <% if admin_customers.deleted? %>
+        <%= link_to admin_restore_delete_path(id: admin_customers.id), class: "btn btn-info ml-2" do %>
+          <i class="fas fa-undo-alt"></i>
+        <% end %>
+      <% end %>
     </div>
   </td>
 </tr>
