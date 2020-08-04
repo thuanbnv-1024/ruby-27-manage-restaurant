@@ -3,45 +3,51 @@
     <div class="sb-sidenav-menu">
       <div class="nav">
         <div class="sb-sidenav-menu-heading"><%= t "admin.core" %></div>
-        <%= link_to admin_root_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-          <%= t "admin.dashboard" %>
+        <% if current_admin_user.admin? %>
+          <%= link_to admin_root_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <%= t "admin.dashboard" %>
+          <% end %>
+          <%= link_to admin_departments_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+            <%= t "admin.departments.index.title_text" %>
+          <% end %>
+          <%= link_to admin_users_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+            <%= t "admin.users_db" %>
+          <% end %>
+          <%= link_to admin_dish_types_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <%= t "dish_types.category_title" %>
+          <% end %>
+          <%= link_to admin_dishes_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <%= t "dishes.list_dishes" %>
+          <% end %>
+          <%= link_to admin_admin_customers_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+            <%= t "admin_customer.list" %>
+          <% end %>
         <% end %>
-        <%= link_to admin_departments_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-          <%= t "admin.departments.index.title_text" %>
+        <% if current_admin_user.chef? || current_admin_user.admin? %>
+          <%= link_to admin_orders_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <%= t "order.title" %>
+          <% end %>
         <% end %>
-        <%= link_to admin_table_manage_index_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-          <%= t "table_manage.name" %>
-        <% end %>
-        <%= link_to admin_users_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
-          <%= t "admin.users_db" %>
-        <% end %>
-        <%= link_to admin_dish_types_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-          <%= t "dish_types.category_title" %>
-        <% end %>
-        <%= link_to admin_admin_customers_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-          <%= t "admin_customer.list" %>
-        <% end %>
-        <%= link_to admin_dishes_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-          <%= t "dishes.list_dishes" %>
-        <% end %>
-        <%= link_to admin_book_tables_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-          <%= t "book_tables.list_book_table" %>
-        <% end %>
-        <%= link_to admin_orders_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-          <%= t "order.title" %>
-        <% end %>
-         <%= link_to admin_order_invoices_path, class: "nav-link" do %>
-          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-          <%= t "order.pay" %>
+        <% if current_admin_user.receptionists? || current_admin_user.admin? %>
+          <%= link_to admin_table_manage_index_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <%= t "table_manage.name" %>
+          <% end %>
+          <%= link_to admin_book_tables_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <%= t "book_tables.list_book_table" %>
+          <% end %>
+          <%= link_to admin_order_invoices_path, class: "nav-link" do %>
+            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <%= t "order.pay" %>
+          <% end %>
         <% end %>
       </div>
     </div>

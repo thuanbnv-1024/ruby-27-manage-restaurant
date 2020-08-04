@@ -9,12 +9,12 @@ class User < ApplicationRecord
 
   delegate :name, to: :department, prefix: :department
 
-  enum gender: {man: 0, women: 1}
+  enum gender: {man: 0, women: 1}, role: {customer: 0, admin: 1, waiters: 2, receptionists: 3, chef: 4}
 
   VALID_EMAIL_REGEX = Settings.email_regex
   PERMIT_ATTRIBUTES = %i(name email password password_confirmation address
     birthday phone gender).freeze
-  USER_PARAMS = %i(name email address phone birthday
+  USER_PARAMS = %i(name email address phone birthday role
     department_id gender password password_confirmation).freeze
   CUSTOMER_UPDATE_PARAMS = %i(name address phone birthday gender
     password password_confirmation).freeze

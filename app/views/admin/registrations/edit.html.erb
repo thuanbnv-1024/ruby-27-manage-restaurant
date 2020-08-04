@@ -1,0 +1,9 @@
+<% provide :button_text, t("sign_ups.update") %>
+<div class="container">
+  <br>
+  <div class="back">
+    <%= link_to t("sign_ups.back"), :back, class: "btn btn-primary" %>
+  </div>
+  <h2><%= t "sign_ups.edit" %></h2>
+  <%= render "form" %>
+</div>

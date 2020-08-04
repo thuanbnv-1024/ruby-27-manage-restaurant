@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_03_014840) do
+ActiveRecord::Schema.define(version: 2020_08_04_082304) do
 
   create_table "book_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.datetime "start_time"
@@ -170,6 +170,7 @@ ActiveRecord::Schema.define(version: 2020_08_03_014840) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "deleted_at"
+    t.integer "role", default: 0, null: false
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["department_id"], name: "index_users_on_department_id"
     t.index ["email"], name: "index_users_on_email", unique: true

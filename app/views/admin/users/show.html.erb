@@ -1,0 +1,11 @@
+<div class="modal-body">
+  <% unless current_admin_user.customer? %>
+    <p><%= t "sign_ups.department" %>: <span class="department"><%= @user.department_name %></span></p>
+  <% end %>
+  <p><%= t "sign_ups.name" %>: <span class="name"><%= @user.name %></span></p>
+  <p><%= t "sign_ups.email" %>: <span class="email"><%= @user.email %></span></p>
+  <p><%= t "sign_ups.address" %>: <span class="address"><%= @user.address %></span></p>
+  <p><%= t "sign_ups.phone" %>: <span class="phone"><%= @user.phone %></span></p>
+  <p><%= t "sign_ups.gender" %>: <span class="gender"><%= t "sign_ups.#{@user.gender}" %></span></p>
+  <p><%= t "sign_ups.birthday" %>: <span class="birthday"><%= @user.birthday %></span></p>
+</div>
