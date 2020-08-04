@@ -1,5 +1,6 @@
 class Admin::DishesController < AdminController
   before_action :load_dish, except: %i(new create index)
+
   include DishesHelper
 
   def index
