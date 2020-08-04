@@ -1,4 +1,5 @@
 class AdminController < ActionController::Base
+  before_action :authenticate_admin_user!
   before_action :set_locale
 
   private

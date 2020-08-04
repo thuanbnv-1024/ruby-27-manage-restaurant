@@ -1,5 +1,7 @@
 class BookTablesController < ApplicationController
+  before_action :authenticate_admin_user!
   before_action :check_login, only: :create
+
   include SessionHelper
 
   def index; end
@@ -7,7 +9,7 @@ class BookTablesController < ApplicationController
   def new; end
 
   def create
-    @book_table = current_user.book_table.build book_table_params
+    @book_table = current_admin_user.book_tables.build book_table_params
     if @book_table.save
       flash[:success] = t "book_tables.create_success"
     else
