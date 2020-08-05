@@ -25,7 +25,10 @@ gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 gem "rails-i18n"
 gem "ransack"
+gem "redis", "~> 4.2.0"
 gem "sass-rails", ">= 6"
+gem "sidekiq"
+gem "sinatra", ">= 1.3.0", require: nil
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
 
@@ -49,6 +52,7 @@ end
 
 group :test do
   gem "capybara", ">= 2.15"
+  gem "rspec-sidekiq"
   gem "rspec-support"
   gem "selenium-webdriver"
   gem "webdrivers"

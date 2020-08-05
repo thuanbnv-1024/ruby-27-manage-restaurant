@@ -31,9 +31,14 @@ en:
       featured_food: "Weekly Featured Food"
       sign_up: "Signup for our newsletters"
       sign_up_submit: "Send Message"
+    send_email:
+      success: "Send email success"
+      placeholder_email: "Please put the email..."
+      title: "SendInfomation#restaurant_information"
+      subject: "Send email form Restaurant"
   book_tables:
     create_success: "Success"
     create_error: "Error"
     person: "Persons"
-    info: "Infomation"
+    info: "Information"
     account: "Account"
