@@ -1,5 +1,4 @@
 class EmailInformationController < ApplicationController
-  
   def create
     h = JSON.generate("email" => params[:email])
     InforWorker.perform_at(1.minute.from_now, h)

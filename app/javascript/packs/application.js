@@ -15,3 +15,5 @@ require("packs/vendor/bootstrap")
 require("packs/vendor/bootstrap.min")
 require("packs/jquery-1.12.4")
 require("packs/jquery-ui")
+import toastr from 'toastr'
+window.toastr = toastr
