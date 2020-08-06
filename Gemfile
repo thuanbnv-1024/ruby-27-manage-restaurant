@@ -7,6 +7,7 @@ gem "bcrypt", "3.1.11"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", "~> 3.3.1"
+gem "cancancan", "~> 3.1"
 gem "carrierwave"
 gem "cocoon"
 gem "config"

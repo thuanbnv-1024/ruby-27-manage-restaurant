@@ -3,9 +3,13 @@
   <td class="name"><%= user.name %></td>
   <td class="department"><%= user.department_name %></td>
   <td class="status">
-    <%= link_to t(".show"), [:admin, user], "data-toggle": "modal", "data-target": "#myModal-show-user-#{user.id}", class: "btn btn-primary" %>
-    <%= link_to t(".edit"), admin_user_registration_path(user), remote: true, class: "btn btn-warning" %>
-    <%= link_to t(".delete"), [:admin, user], method: :delete, class: "btn btn-danger destroy-user", data: {id: user.id} %>
+    <%= link_to t(".show"), [:admin, user], class: "btn btn-primary" %>
+    <% if can? :update, user %>
+      <%= link_to t(".edit"), edit_admin_user_path(user), class: "btn btn-warning" %>
+    <% end %>
+    <% if can? :destroy, user %>
+      <%= link_to t(".delete"), admin_user_path(user), method: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger" %>
+    <% end %>
   </td>
 </tr>
 <div class="modal" id="myModal-show-user-<%= user.id %>">
