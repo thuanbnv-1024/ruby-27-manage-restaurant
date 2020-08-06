@@ -37,8 +37,8 @@ vi:
       title: "Thông tin về nhà hàng"
       subject: "Email được gửi từ nhà hàng"
   book_tables:
-    create_success: "Thành công"
-    create_error: "Thất bại"
+    create_success: "Đặt bàn thành công"
+    create_error: "Đặt bàn thất bại"
     person: "Số người"
     info: "Thông tin"
     account: "Tài khoản"

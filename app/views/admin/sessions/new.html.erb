@@ -1,33 +1,39 @@
-<div class="container sign-in">
-  <div class="row justify-content-center">
-    <div class="col-lg-5">
-      <div class="card shadow-lg border-0 rounded-lg mt-5">
-        <div class="card-header"><h3 class="text-center font-weight-light my-4"><%= t "admin.login" %></h3></div>
-        <div class="card-body">
-          <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
-            <div class="form-group">
-              <%= f.label :email, t(".email"), class: "small mb-1" %>
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control py-4" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :password, t(".password"), class: "small mb-1" %>
-              <%= f.password_field :password, autocomplete: "current-password", class: "form-control py-4" %>
-            </div>
-            <div class="form-group">
-              <% if devise_mapping.rememberable? %>
-                <div class="field">
-                  <%= f.check_box :remember_me %>
-                  <%= f.label :remember_me %>
-                </div>
+<div class="sign-in">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <div class="card shadow-lg border-0 rounded-lg mt-5">
+          <div class="card-header"><h3 class="text-center font-weight-light my-4"><%= t "admin.login" %></h3></div>
+          <div class="card-body">
+            <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
+              <% flash.each do |message_type, message| %>
+                <div class="alert alert-<%= message_type %>"><%= message %></div>
               <% end %>
-            </div>
-            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-              <%= f.submit t(".submit"), class: "btn btn-primary" %>
-            </div>
-          <% end %>
+              <div class="form-group">
+                <%= f.label :email, t("sign_ins.email"), class: "small mb-1" %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control py-4" %>
+              </div>
+              <div class="form-group">
+                <%= f.label :password, t("sign_ins.password"), class: "small mb-1" %>
+                <%= f.password_field :password, autocomplete: "current-password", class: "form-control py-4" %>
+              </div>
+              <div class="form-group">
+                <% if devise_mapping.rememberable? %>
+                  <div class="field">
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me, t("sign_ins.remember_me") %>
+                  </div>
+                <% end %>
+              </div>
+              <div class="form-group">
+                <%= f.submit t("sign_ins.sign_in"), class: "btn btn-primary submit" %>
+              </div>
+            <% end %>
+            <%= link_to t("sign_ups.sign_up"), new_registration_path(resource_name) %><br />
+            <%= link_to t("sign_ins.forgot_password"), new_password_path(resource_name) %><br />
+          </div>
         </div>
       </div>
-      <%= render "devise/shared/links" %>
     </div>
   </div>
 </div>

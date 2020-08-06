@@ -9,7 +9,9 @@ class User < ApplicationRecord
 
   delegate :name, to: :department, prefix: :department
 
-  enum gender: {man: 0, women: 1}, role: {customer: 0, admin: 1, waiters: 2, receptionists: 3, chef: 4}
+  enum gender: {man: 0, women: 1},
+    role: {admin: 0, waiters: 1, customer: 2, receptionists: 3, chef: 4},
+    activated: {not_active: 0, active: 1}
 
   VALID_EMAIL_REGEX = Settings.email_regex
   PERMIT_ATTRIBUTES = %i(name email password password_confirmation address

@@ -1,8 +1,5 @@
 class BookTablesController < ApplicationController
   before_action :authenticate_admin_user!
-  before_action :check_login, only: :create
-
-  include SessionHelper
 
   def index; end
 
@@ -22,11 +19,5 @@ class BookTablesController < ApplicationController
 
   def book_table_params
     params.require(:book_table).permit BookTable::BOOK_TABLE_PARAMS
-  end
-
-  def check_login
-    return if logged_in
-
-    redirect_to login_path
   end
 end

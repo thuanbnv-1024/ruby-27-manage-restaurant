@@ -71,6 +71,7 @@ account:"
         show: "Show"
         edit: "Edit"
         delete: "Delete"
+        confirm: "You are sure?"
       find_user:
         danger: "Does not exist"
       update:

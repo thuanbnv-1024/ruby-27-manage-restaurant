@@ -2,7 +2,9 @@
 <div class="container">
   <br>
   <div class="back">
-    <%= link_to t("sign_ups.back"), :back, class: "btn btn-primary" %>
+    <% if current_admin_user&.customer? %>
+      <%= link_to t("sign_ups.back"), :back, class: "btn btn-primary" %>
+    <% end %>
   </div>
   <h2><%= t "sign_ups.edit" %></h2>
   <%= render "form" %>
