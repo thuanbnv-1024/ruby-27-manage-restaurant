@@ -1,0 +1,7 @@
+en:
+  sign_ins:
+    sign_in: "Login"
+    remember_me: "Remember me"
+    password: "Password"
+    email: "Email"
+    forgot_password: "Forgot your password"

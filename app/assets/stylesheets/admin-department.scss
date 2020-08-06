@@ -4,6 +4,15 @@
   padding: 30px;
 }
 
+body > .sign-in {
+  background: $grey2;
+  min-height: 1000px;
+}
+
+body > .sign-in .submit{
+  width: 100%;
+}
+
 .list_departments .row-dp td.name{
   min-width: 200px;
 }

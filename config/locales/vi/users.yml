@@ -68,6 +68,7 @@ vi:
         show: "Xem"
         edit: "Sửa"
         delete: "Xóa"
+        confirm: "Bạn có chắc chắn muốn xóa?"
       find_user:
         danger: "Không tồn tại"
       update:

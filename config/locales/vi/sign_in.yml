@@ -1,0 +1,7 @@
+vi:
+  sign_ins:
+    sign_in: "Đăng nhập"
+    remember_me: "Nhớ tài khoản"
+    password: "Mật khẩu"
+    email: "Tài khoản"
+    forgot_password: "Quên mật khẩu?"

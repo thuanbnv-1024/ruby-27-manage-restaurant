@@ -8,4 +8,5 @@
   <p><%= t "sign_ups.phone" %>: <span class="phone"><%= @user.phone %></span></p>
   <p><%= t "sign_ups.gender" %>: <span class="gender"><%= t "sign_ups.#{@user.gender}" %></span></p>
   <p><%= t "sign_ups.birthday" %>: <span class="birthday"><%= @user.birthday %></span></p>
+  <p><%= t "sign_ups.status" %>: <span class="active"><%= t "sign_ups.#{@user.activated}" %></span></p>
 </div>

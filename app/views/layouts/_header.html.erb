@@ -13,12 +13,14 @@
         <div id="main-nav" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to t("header.home"), root_path %></li>
-            <li><%= link_to t("header.menu"), dinner_tables_path %></li>
+            <% if current_admin_user&.waiters? %>
+              <li><%= link_to t("header.menu"), dinner_tables_path %></li>
+            <% end %>
             <li><%= link_to t("search.search_button"), dishes_path %></li>
             <% if admin_user_signed_in? %>
               <li>
                 <div class="dropdown">
-                  <%= link_to t("book_tables.account"), "#" %>
+                  <%= link_to t("book_tables.account"), user_path(current_admin_user) %>
                   <div class="dropdown-content">
                      <p><%= link_to t("book_tables.info"), user_path(current_admin_user) %></p>
                      <p><%= link_to t("sign_ups.edit"), edit_admin_user_registration_path %></p>
