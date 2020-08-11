@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     root "static_pages#index"
     namespace :admin do
       root "admin#index"
-      devise_for :users, controllers: {registrations: "admin/registrations", sessions: "admin/sessions"}
+      devise_for :users, controllers: {registrations: "admin/registrations", sessions: "admin/sessions", passwords: "passwords"}
       resources :users
       resources :admin_customers
       resources :departments

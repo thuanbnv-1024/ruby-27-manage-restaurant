@@ -1,0 +1,21 @@
+<div class="container fix-footer">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="card shadow-lg border-0 rounded-lg mt-5">
+        <div class="card-header"><h3 class="text-center font-weight-light my-4"><%=t "reset_pass.new_password_reset_title" %></h3></div>
+        <div class="card-body">
+          <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+            <%= custom_bootstrap_flash %>
+            <div class="form-group">
+              <%= f.label :email, t("sign_ins.email"), class: "small mb-1" %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control py-4" %>
+            </div>
+            <div class="form-group">
+              <%= f.submit t("reset_pass.new_password_reset_submit"), class: "btn btn-primary submit" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
