@@ -5,8 +5,7 @@
   <thead>
     <tr>
       <th scope="col"><%= "#" %></th>
-      <th scope="col"><%= t "order.number_table" %></th>
-      <th scope="col"><%= t "order.total_money" %></th>
+      <th scope="col"><%= t "order.number_table" %></th>  
       <th scope="col"><%= t "order.staff" %></th>
       <th scope="col"><%= t "order.status" %></th>
       <th scope="col"><%= t "order.action" %></th>
@@ -17,3 +16,4 @@
   </tbody>
 </table>
 <%= paginate @orders, theme: "twitter-bootstrap-3" %>
+<%= link_to t("admin_customer.back"), admin_orders_path, class: "btn btn-outline-info" %>

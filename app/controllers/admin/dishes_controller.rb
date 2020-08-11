@@ -4,7 +4,7 @@ class Admin::DishesController < AdminController
   include DishesHelper
 
   def index
-    @dishes = Dish.page(params[:page]).per(Settings.dishes.per_page)
+    @dishes = Dish.includes(:images).page(params[:page]).per(Settings.dishes.per_page)
   end
 
   def new

@@ -9,3 +9,6 @@ en:
     table_off: "Off"
     name: "Table manage"
     total_table: "Total of table"
+    fillter_title: "Filter table"
+    using: "Using"
+    free: "Free"

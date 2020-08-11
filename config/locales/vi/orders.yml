@@ -33,3 +33,4 @@ vi:
   order_item:
     order_item_success: "Hoàn thành"
     order_item_pending: "Đang chờ"
+    quantity: "Số lượng : "

@@ -17,3 +17,4 @@ en:
   order_item:
     order_item_success: "Success"
     order_item_pending: "Pending"
+    quantity: "Quantity : "
