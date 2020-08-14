@@ -1,20 +1,19 @@
- <tr>
-  <th scope="row"><%= order_counter + 1 %></th>
-  <th scope="row"><%= order.dinner_table_table_number %></th>
-  <td><%= order.total %></td>
-  <td><%= order.user_name %></td>
-  <td>
-    <% if order.order_items.any?(&:pending?) %>
-      <span class="badge badge-warning"><%= t "order.order_not_success" %></span>
-    <% else %>
-      <span class="badge badge-success"><%= t "order.order_success" %></span>
+<tr>
+<th scope="row"><%= order_counter + 1 %></th>
+<th scope="row"><%= order.dinner_table_table_number %></th>
+<td><%= order.user_name %></td>
+<td>
+  <% if order.order_items.any?(&:pending?) %>
+    <span class="badge badge-warning"><%= t "order.order_not_success" %></span>
+  <% else %>
+    <span class="badge badge-success"><%= t "order.order_success" %></span>
+  <% end %>
+</td>
+<td>
+  <div class="btn-group">
+    <%= link_to admin_order_path(id: order.id), class: "btn btn-warning" do %>
+      <i class="fa fa-eye"></i>
     <% end %>
-  </td>
-  <td>
-    <div class="btn-group">
-      <%= link_to admin_order_path(id: order.id), class: "btn btn-warning" do %>
-        <i class="fa fa-eye"></i>
-      <% end %>
-    </div>
-  </td>
+  </div>
+</td>
 </tr>

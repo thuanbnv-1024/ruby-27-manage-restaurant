@@ -1,6 +1,7 @@
 <h1><%= t "table_manage.title" %></h1>
 <%= form_tag admin_table_manage_index_path, method: :get, class: "form-inline", id: "option_form" do %>
-  <%= select_tag :option_status, options_for_select(DinnerTable.statuses, selected: params[:option_status]), class: "form-control", include_blank: true %>
+  <span><%= t "table_manage.fillter_title" %></span>
+  <%= select_tag :option_status, options_for_select(status_table, selected: params[:option_status]), class: "form-control", include_blank: true %>
 <% end %>
 <div class="row table_manage">
   <div class="col-md-12">

@@ -9,3 +9,6 @@ vi:
     table_off: "Đang còn trống"
     name: "Quản lý bàn"
     total_table: "Tổng số bàn"
+    fillter_title: "Lọc trạng thái bàn:"
+    using: "Đang dùng"
+    free: "Đang trống"
