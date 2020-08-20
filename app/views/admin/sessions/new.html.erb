@@ -29,6 +29,7 @@
                 <%= f.submit t("sign_ins.sign_in"), class: "btn btn-primary submit" %>
               </div>
             <% end %>
+            <%= link_to t("admin_customer.facebook"), admin_user_facebook_omniauth_authorize_path, class: "btn btn-block btn-facebook" %>
             <%= link_to t("sign_ups.sign_up"), new_registration_path(resource_name) %><br />
             <%= link_to t("sign_ins.forgot_password"), new_password_path(resource_name) %><br />
           </div>

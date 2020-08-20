@@ -1,11 +1,15 @@
 require "sidekiq/web"
 
 Rails.application.routes.draw do
+  namespace :admin do
+    devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: "admin/omniauth_callbacks"}
+  end
+
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#index"
     namespace :admin do
       root "admin#index"
-      devise_for :users, controllers: {registrations: "admin/registrations", sessions: "admin/sessions", passwords: "passwords"}
+      devise_for :users, skip: :omniauth_callbacks, controllers: {registrations: "admin/registrations", sessions: "admin/sessions", passwords: "passwords"}
       resources :users
       resources :admin_customers
       resources :departments
