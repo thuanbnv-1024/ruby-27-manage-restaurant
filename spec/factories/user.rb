@@ -7,7 +7,7 @@ FactoryBot.define do
     f.address {"HN"}
     f.phone {1234567891}
     f.birthday {"2020-12-12"}
-    f.role {"customer"}
+    f.role {"admin"}
     f.gender{"man"}
   end
 end
