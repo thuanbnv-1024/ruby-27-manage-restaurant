@@ -18,3 +18,4 @@ en:
     order_item_success: "Success"
     order_item_pending: "Pending"
     quantity: "Quantity : "
+    ordered: "has been ordered"
