@@ -21,6 +21,7 @@ en:
     placeholder_address: "Input for adress"
     button_search: "Search"
     back: "Back"
+    facebook: "Facebook"
     restore_success: "Restore user success"
     page_not_found: "Not found result"
     edit:

@@ -21,6 +21,7 @@ vi:
       placeholder_address: "Nhập vào address..."
       button_search: "Tìm kiếm"
       back: "Quay lại"
+      facebook: "Facebook"
       restore_success: "Khôi phục tài khoản thành công"
       page_not_found: "Không tìm thấy kết quả"
       edit:

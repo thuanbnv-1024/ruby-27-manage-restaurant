@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i(facebook)
 
   acts_as_paranoid
 
@@ -33,6 +33,31 @@ class User < ApplicationRecord
   validates :phone, numericality: true,
     length: {minimum: Settings.user.phone.min_length, maximum: Settings.user.phone.max_length}
   validates :password, length: {minimum: Settings.user.password.min_length}, allow_nil: true
+
+  class << self
+    def new_with_session params, session
+      super.tap do |user|
+        if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+          user.email = data["email"] if user.email.blank?
+        end
+      end
+    end
+
+    def from_omniauth auth
+      auth_user = User.find_by email: auth.info.email
+      return auth_user if auth_user
+
+      omniauth_user auth
+    end
+
+    def omniauth_user auth
+      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+        user.email = auth.info.email
+        user.name = auth.info.name
+        user.password = Devise.friendly_token[0, 20]
+      end
+    end
+  end
 
   private
 
