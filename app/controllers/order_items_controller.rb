@@ -8,7 +8,14 @@ class OrderItemsController < ApplicationController
   end
 
   def create
-    create_order_and_order_items if current_admin_user
+    kitchen_users = User.chef
+    food_name = @order_item.dish.name
+    return unless current_admin_user
+
+    create_order_and_order_items
+    kitchen_users.each do |user|
+      KitchenNotifWorker.new.perform(user.id,food_name)
+    end
   end
 
   def update

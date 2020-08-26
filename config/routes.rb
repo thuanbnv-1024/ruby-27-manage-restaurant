@@ -1,6 +1,10 @@
 require "sidekiq/web"
 
 Rails.application.routes.draw do
+
+  mount Sidekiq::Web => "/sidekiq"
+  mount ActionCable.server => "/cable"
+  
   namespace :admin do
     devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: "admin/omniauth_callbacks"}
   end
@@ -36,5 +40,4 @@ Rails.application.routes.draw do
     resources :order_items
     resources :email_information, only: :create
   end
-  mount Sidekiq::Web => "/sidekiq"
 end
