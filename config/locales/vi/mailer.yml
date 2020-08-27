@@ -1,0 +1,7 @@
+vi:
+  mailer:
+    reset_pass:
+      hello: "Xin chào"
+      content: "Đường dẫn lấy lại mật khẩu đã gửi tói bạn, vui lòng làm theo hướng dẫn"
+      button: "Thay đổi mật khẩu"
+      ignore_message: "Nếu bạn không yêu cầu mật khẩu có thể bỏ qua email"

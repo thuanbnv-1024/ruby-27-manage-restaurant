@@ -1,0 +1,7 @@
+en:
+  mailer:
+    reset_pass:
+      hello: "Hello"
+      content: "Someone has requested a link to change your password. You can do this through the link below."
+      button: "Change my password"
+      ignore_message: "If you didn't request this, please ignore this email."

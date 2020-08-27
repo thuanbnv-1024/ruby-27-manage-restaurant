@@ -30,9 +30,10 @@ class User < ApplicationRecord
 
   validates :name, length: {maximum: Settings.user.name.max_length}
   validates :address, length: {maximum: Settings.user.address.max_length}
-  validates :phone, numericality: true,
+  validates :phone, numericality: true, numberint: true,
     length: {minimum: Settings.user.phone.min_length, maximum: Settings.user.phone.max_length}
-  validates :password, length: {minimum: Settings.user.password.min_length}, allow_nil: true
+  validates :password, length: {minimum: Settings.user.password.min_length},
+            allow_nil: true, passwordregex: true, previouspassword: true
 
   class << self
     def new_with_session params, session
