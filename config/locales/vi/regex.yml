@@ -1,0 +1,7 @@
+vi:
+  regex:
+    number: 
+      message: "phải là số nguyên"
+    password:
+      message: "ít nhất một ký tự thường, chữ hoa, và số "
+      previous_message: "đã được dùng trước đây"

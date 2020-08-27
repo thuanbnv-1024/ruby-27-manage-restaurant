@@ -14,7 +14,7 @@ class OrderItemsController < ApplicationController
 
     create_order_and_order_items
     kitchen_users.each do |user|
-      KitchenNotifWorker.new.perform(user.id,food_name)
+      KitchenNotifWorker.new.perform(user.id, food_name)
     end
   end
 

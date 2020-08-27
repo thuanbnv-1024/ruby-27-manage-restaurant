@@ -1,0 +1,7 @@
+en:
+  regex:
+    number: 
+      message: "is only integer"
+    password:
+      message: "at least number, capitalize letter, lowercase letters"
+      previous_message: "previous lastchanged password"

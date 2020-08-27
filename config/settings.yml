@@ -47,3 +47,6 @@ role:
   default_password: "Ngvanhao123"
 phone: "0123456789"
 birthday: "2020-07-13"
+regex:
+  number_int: !ruby/regexp /^(?!0+$)\d+$/
+  password_regex: !ruby/regexp /^(?=.*[a-zA-Z])(?=.*[0-9])/i 
